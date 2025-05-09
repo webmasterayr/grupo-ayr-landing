@@ -1,4 +1,4 @@
-import { Award, Check, ChevronDown, Facebook, Globe, Handshake, Instagram, Leaf, Link, Linkedin, Navigation, Scale, Twitter, } from "lucide-react";
+import { Award, Check, ChevronDown, Facebook, Globe, Handshake, Instagram, Leaf, Link, Linkedin, Navigation, Scale, Twitter, Wheat, } from "lucide-react";
 import JsonLd from "./components/seo/JsonLd";
 import Image from "next/image";
 import BrandLogo from "@/modules/landing/presentation/components/shared/brand-logo/brand-logo";
@@ -305,76 +305,62 @@ export default function HomePage() {
 
       {/* Products Showcase */}
       <section id="products" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6">Our Premium Products</h2>
-            <p className="max-w-2xl mx-auto text-gray-600">
-              From single-ingredient flours to specialized pet treats, our products represent 
-              the highest quality standards in the industry.
-            </p>
-          </div>
-          
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold mb-8 text-center">Flour Varieties</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {[
-                "Sweet Potato Flour",
-                "Purple Sweet Potato Flour",
-                "Cassava Flour",
-                "Taro Flour",
-                "Green Banana Flour",
-                "Turmeric Flour",
-                "Yucca Flour",
-                "Plantain Flour"
-              ].map((flour, index) => (
-                <div key={index} className="bg-green-50 p-4 rounded-lg text-center hover:bg-green-100 transition">
-                  <div className="w-20 h-20 rounded-full bg-green-200 mx-auto mb-3 flex items-center justify-center">
-                    <div className="w-16 h-16 rounded-full overflow-hidden">
-                      <Image src={getImage('/products.jpg')} alt={flour} className="w-full h-full object-cover" height={64} width={64} unoptimized={true} />
-                    </div>
-                  </div>
-                  <p className="font-medium">{flour}</p>
-                </div>
-              ))}
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl lg:text-4xl font-bold mb-6">Our Premium Products</h2>
+      <p className="max-w-2xl mx-auto text-gray-600">
+        From single-ingredient flours to specialized pet treats, our products represent
+        the highest quality standards in the industry.
+      </p>
+    </div>
+    
+    <div className="mb-16">
+      <h3 className="text-2xl font-bold mb-8 text-center">Flour Varieties</h3>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {[
+          { name: "Sweet Potato Flour", icon: "Potato" },
+          { name: "Purple Sweet Potato Flour", icon: "Vegetable" },
+          { name: "Cassava Flour", icon: "Wheat" },
+          { name: "Taro Flour", icon: "CircleDot" },
+          { name: "Green Banana Flour", icon: "Apple" },
+          { name: "Turmeric Flour", icon: "Flower2" },
+          { name: "Yucca Flour", icon: "Sprout" },
+          { name: "Plantain Flour", icon: "Banana" }
+        ].map((flour, index) => (
+          <div key={index} className="bg-green-50 p-4 rounded-lg text-center hover:bg-green-100 transition">
+            <div className="w-20 h-20 rounded-full bg-green-200 mx-auto mb-3 flex items-center justify-center">
+              <Leaf className="h-10 w-10 text-green-600" />
             </div>
-            {/* <div className="text-center mt-8">
-              <button className="px-6 py-2 border border-green-600 text-green-600 rounded-md font-medium hover:bg-green-600 hover:text-white transition">
-                View All 26+ Flour Varieties
-              </button>
-            </div> */}
+            <p className="font-medium">{flour.name}</p>
           </div>
-          
-          <div>
-            <h3 className="text-2xl font-bold mb-8 text-center">Pet Treats</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {[
-                "Sweet Potato Chews",
-                "Cassava Biscuits",
-                "Banana Bites",
-                "Taro Treats",
-                "Mixed Root Crisps",
-                "Organic Dental Sticks",
-                "Training Treats",
-                "Hypoallergenic Snacks"
-              ].map((treat, index) => (
-                <div key={index} className="bg-blue-50 p-4 rounded-lg text-center hover:bg-blue-100 transition">
-                  <div className="w-20 h-20 rounded-full bg-blue-200 mx-auto mb-3 flex items-center justify-center">
-                    <div className="w-16 h-16 rounded-full overflow-hidden">
-                      <Image src={getImage('/products.jpg')} alt={treat} className="w-full h-full object-cover" height={64} width={64} unoptimized={true} />
-                    </div>
-                  </div>
-                  <p className="font-medium">{treat}</p>
-                </div>
-              ))}
+        ))}
+      </div>
+    </div>
+    
+    <div>
+      <h3 className="text-2xl font-bold mb-8 text-center">Pet Treats</h3>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {[
+          { name: "Sweet Potato Chews", icon: "Bone" },
+          { name: "Cassava Biscuits", icon: "Cookie" },
+          { name: "Banana Bites", icon: "Banana" },
+          { name: "Taro Treats", icon: "CircleDot" },
+          { name: "Mixed Root Crisps", icon: "Salad" },
+          { name: "Organic Dental Sticks", icon: "Toothbrush" },
+          { name: "Training Treats", icon: "Medal" },
+          { name: "Hypoallergenic Snacks", icon: "ShieldCheck" }
+        ].map((treat, index) => (
+          <div key={index} className="bg-blue-50 p-4 rounded-lg text-center hover:bg-blue-100 transition">
+            <div className="w-20 h-20 rounded-full bg-blue-200 mx-auto mb-3 flex items-center justify-center">
+              <Wheat className="h-10 w-10 text-blue-600" />
             </div>
-            {/* <div className="text-center mt-8">
-              <button className="px-6 py-2 border border-blue-600 text-blue-600 rounded-md font-medium hover:bg-blue-600 hover:text-white transition">
-                View All Pet Treats
-              </button>
-            </div> */}
+            <p className="font-medium">{treat.name}</p>
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Process Section */}
       <section id="process" className="py-20 bg-gray-900 text-white">
