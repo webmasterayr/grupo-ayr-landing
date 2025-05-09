@@ -170,16 +170,16 @@ export default function HomePage() {
             
             <div className="lg:w-1/2 grid grid-cols-2 gap-4">
               <div className="rounded-lg overflow-hidden h-64">
-                <img src="/api/placeholder/600/800" alt="Farming operations" className="w-full h-full object-cover" />
+                <img src="/farming-operations.jpg" alt="Farming operations" className="w-full h-full object-cover" />
               </div>
               <div className="rounded-lg overflow-hidden h-64 mt-8">
-                <img src="/api/placeholder/600/800" alt="Processing facility" className="w-full h-full object-cover" />
+                <img src="/processing-facility.jpg" alt="Processing facility" className="w-full h-full object-cover" />
               </div>
               <div className="rounded-lg overflow-hidden h-64">
-                <img src="/api/placeholder/600/800" alt="Products" className="w-full h-full object-cover" />
+                <img src="/products.jpg" alt="Products" className="w-full h-full object-cover" />
               </div>
               <div className="rounded-lg overflow-hidden h-64 mt-8">
-                <img src="/api/placeholder/600/800" alt="Farm workers" className="w-full h-full object-cover" />
+                <img src="/farm-workers.jpg" alt="Farm workers" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>
@@ -201,7 +201,7 @@ export default function HomePage() {
             <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition group">
               <div className="h-56 bg-green-600 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-green-900/80 to-transparent"></div>
-                <img src="/api/placeholder/600/400" alt="SEMIG" className="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                <img src="/semig.jpg" alt="SEMIG" className="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
                 <div className="absolute bottom-4 left-4 text-white">
                   <h3 className="text-2xl font-bold">SEMIG</h3>
                 </div>
@@ -232,7 +232,7 @@ export default function HomePage() {
             <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition group">
               <div className="h-56 bg-orange-600 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-orange-900/80 to-transparent"></div>
-                <img src="/api/placeholder/600/400" alt="INTERBAI" className="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                <img src="/interbai.jpg" alt="INTERBAI" className="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
                 <div className="absolute bottom-4 left-4 text-white">
                   <h3 className="text-2xl font-bold">INTERBAI</h3>
                 </div>
@@ -263,7 +263,7 @@ export default function HomePage() {
             <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition group">
               <div className="h-56 bg-blue-600 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 to-transparent"></div>
-                <img src="/api/placeholder/600/400" alt="MELY FOODS" className="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                <img src="/mely-foods.jpg" alt="MELY FOODS" className="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
                 <div className="absolute bottom-4 left-4 text-white">
                   <h3 className="text-2xl font-bold">MELY FOODS</h3>
                 </div>
@@ -321,7 +321,7 @@ export default function HomePage() {
                 <div key={index} className="bg-green-50 p-4 rounded-lg text-center hover:bg-green-100 transition">
                   <div className="w-20 h-20 rounded-full bg-green-200 mx-auto mb-3 flex items-center justify-center">
                     <div className="w-16 h-16 rounded-full overflow-hidden">
-                      <img src={`/api/placeholder/100/100`} alt={flour} className="w-full h-full object-cover" />
+                      <img src="/products.jpg" alt={flour} className="w-full h-full object-cover" />
                     </div>
                   </div>
                   <p className="font-medium">{flour}</p>
@@ -351,7 +351,7 @@ export default function HomePage() {
                 <div key={index} className="bg-blue-50 p-4 rounded-lg text-center hover:bg-blue-100 transition">
                   <div className="w-20 h-20 rounded-full bg-blue-200 mx-auto mb-3 flex items-center justify-center">
                     <div className="w-16 h-16 rounded-full overflow-hidden">
-                      <img src={`/api/placeholder/100/100`} alt={treat} className="w-full h-full object-cover" />
+                      <img src="/products.jpg" alt={treat} className="w-full h-full object-cover" />
                     </div>
                   </div>
                   <p className="font-medium">{treat}</p>
@@ -398,7 +398,7 @@ export default function HomePage() {
                 </div>
                 <div className="md:w-1/2 md:pl-12 mt-4 md:mt-0">
                   <div className="rounded-lg overflow-hidden h-48">
-                    <img src="/api/placeholder/600/400" alt="Planting process" className="w-full h-full object-cover" />
+                    <img src="/planting-process.jpg" alt="Planting process" className="w-full h-full object-cover" />
                   </div>
                 </div>
               </div>
@@ -407,7 +407,7 @@ export default function HomePage() {
               <div className="flex flex-col md:flex-row items-center">
                 <div className="md:w-1/2 md:pr-12 md:text-right order-1 md:order-2">
                   <div className="rounded-lg overflow-hidden h-48">
-                    <img src="/api/placeholder/600/400" alt="Growing process" className="w-full h-full object-cover" />
+                    <img src="/growing-process.jpg" alt="Growing process" className="w-full h-full object-cover" />
                   </div>
                 </div>
                 <div className="hidden md:flex items-center justify-center z-10 order-2 md:order-3">
@@ -440,7 +440,7 @@ export default function HomePage() {
                 </div>
                 <div className="md:w-1/2 md:pl-12 mt-4 md:mt-0">
                   <div className="rounded-lg overflow-hidden h-48">
-                    <img src="/api/placeholder/600/400" alt="Harvesting process" className="w-full h-full object-cover" />
+                    <img src="/harvesting-process.jpg" alt="Harvesting process" className="w-full h-full object-cover" />
                   </div>
                 </div>
               </div>
@@ -449,7 +449,7 @@ export default function HomePage() {
               <div className="flex flex-col md:flex-row items-center">
                 <div className="md:w-1/2 md:pr-12 md:text-right order-1 md:order-2">
                   <div className="rounded-lg overflow-hidden h-48">
-                    <img src="/api/placeholder/600/400" alt="Processing" className="w-full h-full object-cover" />
+                    <img src="/processing.jpg" alt="Processing" className="w-full h-full object-cover" />
                   </div>
                 </div>
                 <div className="hidden md:flex items-center justify-center z-10 order-2 md:order-3">
@@ -482,7 +482,7 @@ export default function HomePage() {
                 </div>
                 <div className="md:w-1/2 md:pl-12 mt-4 md:mt-0">
                   <div className="rounded-lg overflow-hidden h-48">
-                    <img src="/api/placeholder/600/400" alt="Quality control" className="w-full h-full object-cover" />
+                    <img src="/quality-control.jpg" alt="Quality control" className="w-full h-full object-cover" />
                   </div>
                 </div>
               </div>
@@ -491,7 +491,7 @@ export default function HomePage() {
               <div className="flex flex-col md:flex-row items-center">
                 <div className="md:w-1/2 md:pr-12 md:text-right order-1 md:order-2">
                   <div className="rounded-lg overflow-hidden h-48">
-                    <img src="/api/placeholder/600/400" alt="Global distribution" className="w-full h-full object-cover" />
+                    <img src="/global-distribution.jpg" alt="Global distribution" className="w-full h-full object-cover" />
                   </div>
                 </div>
                 <div className="hidden md:flex items-center justify-center z-10 order-2 md:order-3">
@@ -534,7 +534,7 @@ export default function HomePage() {
             ].map((cert, index) => (
               <div key={index} className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition text-center">
                 <div className="w-24 h-24 mx-auto mb-3 bg-gray-100 rounded-full flex items-center justify-center">
-                  <img src={`/api/placeholder/100/100`} alt={cert.title} className="w-16 h-16 object-contain" />
+                  <img src="/products.jpg" alt={cert.title} className="w-16 h-16 object-contain" />
                 </div>
                 <h3 className="font-bold mb-1">{cert.title}</h3>
                 <p className="text-xs text-gray-500">{cert.desc}</p>
@@ -580,7 +580,7 @@ export default function HomePage() {
       
       <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
         <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mb-4">
-          <img src="/api/placeholder/50/50" alt="Community icon" className="w-6 h-6" />
+          <img src="/community-icon.jpg" alt="Community icon" className="w-6 h-6" />
         </div>
         <h3 className="text-xl font-bold mb-3">Social Responsibility</h3>
         <p className="text-green-100">
@@ -591,7 +591,7 @@ export default function HomePage() {
       
       <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
         <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mb-4">
-          <img src="/api/placeholder/50/50" alt="Ethical trade icon" className="w-6 h-6" />
+          <img src="/ethical-trade-icon.jpg" alt="Ethical trade icon" className="w-6 h-6" />
         </div>
         <h3 className="text-xl font-bold mb-3">Fair & Responsible Trade</h3>
         <p className="text-green-100">
