@@ -2,6 +2,7 @@ import { Award, Check, ChevronDown, Facebook, Globe, Handshake, Instagram, Leaf,
 import JsonLd from "./components/seo/JsonLd";
 import Image from "next/image";
 import BrandLogo from "@/modules/landing/presentation/components/shared/brand-logo/brand-logo";
+import DownloadCatalogButton from "@/components/DownloadCatalogButton";
 
 const jsonLdData = {
   "@context": "https://schema.org",
@@ -665,9 +666,9 @@ export default function HomePage() {
             <button className="px-8 py-3 bg-white text-green-800 rounded-md font-medium hover:bg-green-100 transition shadow-lg">
               Request a Sample
             </button>
-            <button className="px-8 py-3 bg-transparent border-2 border-white text-white rounded-md font-medium hover:bg-white/10 transition">
+            <DownloadCatalogButton className="px-8 py-3 bg-transparent border-2 border-white text-white rounded-md font-medium hover:bg-white/10 transition">
               Download Our Catalog
-            </button>
+            </DownloadCatalogButton>
           </div>
         </div>
       </section>
