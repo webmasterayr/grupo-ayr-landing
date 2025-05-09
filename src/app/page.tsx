@@ -337,11 +337,11 @@ export default function HomePage() {
                 </div>
               ))}
             </div>
-            <div className="text-center mt-8">
+            {/* <div className="text-center mt-8">
               <button className="px-6 py-2 border border-green-600 text-green-600 rounded-md font-medium hover:bg-green-600 hover:text-white transition">
                 View All 26+ Flour Varieties
               </button>
-            </div>
+            </div> */}
           </div>
           
           <div>
@@ -367,11 +367,11 @@ export default function HomePage() {
                 </div>
               ))}
             </div>
-            <div className="text-center mt-8">
+            {/* <div className="text-center mt-8">
               <button className="px-6 py-2 border border-blue-600 text-blue-600 rounded-md font-medium hover:bg-blue-600 hover:text-white transition">
                 View All Pet Treats
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
