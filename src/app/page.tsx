@@ -222,10 +222,10 @@ export default function HomePage() {
               </div>
             </div>
             <div className="p-8 flex-grow flex flex-col">
-              <h3 className="text-2xl font-bold mb-4 text-green-700">Agricultural Production</h3>
+              <h3 className="text-2xl font-bold mb-4 text-green-700">Sustainable and Organic Agriculture
+              </h3>
               <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
-                Operating over 600 hectares under sustainable practices. Specializes in 
-                production of tropical roots and staple crops with a focus on quality and traceability.
+              SEMIG is the agricultural foundation of Grupo AYR. It manages over 600 hectares of tropical roots and functional crops such as sweet potato (orange, purple, and white), cassava, taro, green banana, papaya, and turmeric. All operations follow Good Agricultural Practices (GAP) and regenerative farming models.
               </p>
               <div className="space-y-3">
                 <div className="flex items-start">
@@ -265,10 +265,10 @@ export default function HomePage() {
               </div>
             </div>
             <div className="p-8 flex-grow flex flex-col">
-              <h3 className="text-2xl font-bold mb-4 text-orange-700">Human Consumption Products</h3>
+              <h3 className="text-2xl font-bold mb-4 text-orange-700">Functional Ingredients for the Food Industry
+              </h3>
               <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
-                Interbai is the food ingredient division of Grupo AYR, dedicated to processing tropical root crops such as 
-                sweet potato, cassava, and green banana into high-quality, gluten-free and functional ingredients. 
+              Interbai is Grupo AYR's unit dedicated to transforming tropical crops into innovative, healthy, and versatile food ingredients. The focus is on clean-label products, free of gluten and additives, designed for baking, pastry, snacks, and health-oriented formulations
               </p>
               <div className="space-y-3">
                 <div className="flex items-start">
@@ -308,11 +308,10 @@ export default function HomePage() {
               </div>
             </div>
             <div className="p-8 flex-grow flex flex-col">
-              <h3 className="text-2xl font-bold mb-4 text-blue-700">Animal Nutrition Products</h3>
+              <h3 className="text-2xl font-bold mb-4 text-blue-700">Natural Snacks and Ingredients for Animal Nutrition
+              </h3>
               <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
-                Specialized in developing and supplying functional ingredients for the animal 
-                nutrition industry, with a focus on pet food and treats using innovative, natural 
-                formulations from tropical roots.
+              Mely Foods is Grupo AYR's division focused on pet food and animal nutrition. It produces functional ingredients and 100% natural dehydrated snacks made from tropical roots and fruits such as sweet potato, green banana, papaya, and pumpkin.
               </p>
               <div className="space-y-3">
                 <div className="flex items-start">
