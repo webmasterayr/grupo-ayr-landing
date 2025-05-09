@@ -1,8 +1,27 @@
 import { Award, Check, ChevronDown, Facebook, Globe, Instagram, Leaf, Linkedin, Twitter, } from "lucide-react";
+import JsonLd from "./components/seo/JsonLd";
+
+const jsonLdData = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Grupo AYR | Agroindustry with Purpose",
+  "description": "From our fields to your table. Sustainably grown and processed tropical roots, delivered as premium ingredients worldwide.",
+  "url": "https://www.example.com/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Grupo AYR",
+    "url": "https://www.example.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.example.com/android-chrome-512x512.png"
+    }
+  }
+};
 
 export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-white text-gray-800">
+      <JsonLd data={jsonLdData} />
       {/* Hero Section */}
       <header className="relative h-screen">
         <div className="absolute inset-0 bg-gradient-to-r from-green-900/80 to-green-700/80 z-10"></div>

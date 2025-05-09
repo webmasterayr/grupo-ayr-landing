@@ -24,44 +24,44 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.example.com'),
+  metadataBase: new URL('https://www.grupoayr.hn'),
   title: {
-    template: '%s | Example Company',
-    default: 'Example Company | Welcome',
+    template: '%s | Grupo AYR',
+    default: 'Grupo AYR | Agroindustry with Purpose',
   },
-  description: 'This is a short description for Example Company. Replace with your own.',
-  keywords: ['example', 'company', 'template', 'website'],
-  authors: [{ name: 'Example Company', url: 'https://www.example.com' }],
-  creator: 'Example Company',
-  publisher: 'Example Company',
+  description: 'From our fields to your table. Sustainably grown and processed tropical roots, delivered as premium ingredients worldwide.',
+  keywords: ['Agroindustry', 'Grupo AYR', 'Honduras', 'tropical roots', 'sustainability', 'cassava', 'flour', 'export', 'premium ingredients'],
+  authors: [{ name: 'Grupo AYR', url: 'https://www.grupoayr.hn' }],
+  creator: 'Grupo AYR',
+  publisher: 'Grupo AYR',
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
   openGraph: {
-    title: 'Example Company | Welcome',
-    description: 'This is a short description for Example Company. Replace with your own.',
-    url: 'https://www.example.com',
-    siteName: 'Example Company',
+    title: 'Grupo AYR | Agroindustry with Purpose',
+    description: 'From our fields to your table. Sustainably grown and processed tropical roots, delivered as premium ingredients worldwide.',
+    url: 'https://www.grupoayr.hn',
+    siteName: 'Grupo AYR',
     images: [
       {
-        url: 'https://www.example.com/og-image.png',
-        width: 800,
-        height: 600,
-        alt: 'Example Company',
+        url: 'https://www.grupoayr.hn/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Grupo AYR - Agroindustry with Purpose',
       },
     ],
-    locale: 'en_US',
+    locale: 'es_HN',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Example Company | Welcome',
-    description: 'This is a short description for Example Company. Replace with your own.',
-    images: ['https://www.example.com/twitter-image.png'],
-    site: '@examplecompany',
-    creator: '@examplecompany',
+    title: 'Grupo AYR | Agroindustry with Purpose',
+    description: 'From our fields to your table. Sustainably grown and processed tropical roots, delivered as premium ingredients worldwide.',
+    images: ['https://www.grupoayr.hn/twitter-image.png'],
+    site: '@grupoayr',
+    creator: '@grupoayr',
   },
   robots: {
     index: true,
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     googleBot: 'index, follow',
   },
   alternates: {
-    canonical: 'https://www.example.com',
+    canonical: 'https://www.grupoayr.hn',
   },
   icons: {
     icon: [
