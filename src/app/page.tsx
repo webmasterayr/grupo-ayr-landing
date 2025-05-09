@@ -195,112 +195,149 @@ export default function HomePage() {
       </section>
 
       {/* Our Companies Section */}
-      <section id="companies" className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6">Our Companies</h2>
-            <p className="max-w-2xl mx-auto text-gray-600">
-              Grupo AYR operates through three specialized companies, each focused on 
-              different aspects of the agricultural value chain.
-            </p>
+      <section id="companies" className="py-24 bg-gradient-to-b from-gray-50 to-white">
+      <div className="container mx-auto px-4 max-w-7xl">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-gray-800">Our Companies</h2>
+          <p className="max-w-2xl mx-auto text-gray-600 text-lg">
+            Grupo AYR operates through three specialized companies, each focused on 
+            different aspects of the agricultural value chain.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          {/* SEMIG */}
+          <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border border-green-100 flex flex-col h-full">
+            <div className="h-64 bg-gradient-to-br from-green-600 to-green-500 relative overflow-hidden flex items-center justify-center p-6">
+              <div className="absolute inset-0 opacity-10 bg-pattern-dots"></div>
+              <div className="relative z-10 bg-white/10 backdrop-blur-sm rounded-xl p-6 w-4/5">
+                <Image 
+                  src="/semig.webp" 
+                  alt="SEMIG" 
+                  width={280} 
+                  height={120} 
+                  className="object-contain w-full"
+                />
+              </div>
+            </div>
+            <div className="p-8 flex-grow flex flex-col">
+              <h3 className="text-2xl font-bold mb-4 text-green-700">Agricultural Production</h3>
+              <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
+                Operating over 600 hectares under sustainable practices. Specializes in 
+                production of tropical roots and staple crops with a focus on quality and traceability.
+              </p>
+              <div className="space-y-3">
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 mt-1">
+                    <Check className="text-green-500 mr-3" size={18} />
+                  </div>
+                  <span>Certified organic farming</span>
+                </div>
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 mt-1">
+                    <Check className="text-green-500 mr-3" size={18} />
+                  </div>
+                  <span>Good Agricultural Practices (GAP)</span>
+                </div>
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 mt-1">
+                    <Check className="text-green-500 mr-3" size={18} />
+                  </div>
+                  <span>Responsible production</span>
+                </div>
+              </div>
+            </div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition group">
-              <div className="h-56 bg-green-600 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-t from-green-900/80 to-transparent"></div>
-                <Image src={getImage('/semig.webp')} alt="SEMIG" className="w-full h-full object-cover group-hover:scale-105 transition duration-500" fill unoptimized={true} />
-                <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="text-2xl font-bold">SEMIG</h3>
-                </div>
+          {/* INTERBAI */}
+          <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border border-orange-100 flex flex-col h-full">
+            <div className="h-64 bg-gradient-to-br from-orange-600 to-orange-500 relative overflow-hidden flex items-center justify-center p-6">
+              <div className="absolute inset-0 opacity-10 bg-pattern-dots"></div>
+              <div className="relative z-10 bg-white rounded-xl p-6 w-4/5 shadow-lg">
+                <Image 
+                  src="/interbai.webp" 
+                  alt="INTERBAI" 
+                  width={280} 
+                  height={120} 
+                  className="object-contain w-full"
+                />
               </div>
-              <div className="p-6">
-                <h4 className="text-xl font-semibold mb-3">Agricultural Production</h4>
-                <p className="text-gray-600 mb-4">
-                  Operating over 600 hectares under sustainable practices. Specializes in production of 
-                  tropical roots and staple crops with a focus on quality and traceability.
-                </p>
-                <div className="mt-4 space-y-2">
-                  <div className="flex items-center">
-                    <Check className="text-green-500 mr-2" size={16} />
-                    <span className="text-sm">Certified organic farming</span>
+            </div>
+            <div className="p-8 flex-grow flex flex-col">
+              <h3 className="text-2xl font-bold mb-4 text-orange-700">Human Consumption Products</h3>
+              <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
+                Interbai is the food ingredient division of Grupo AYR, dedicated to processing tropical root crops such as 
+                sweet potato, cassava, and green banana into high-quality, gluten-free and functional ingredients. 
+              </p>
+              <div className="space-y-3">
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 mt-1">
+                    <Check className="text-orange-500 mr-3" size={18} />
                   </div>
-                  <div className="flex items-center">
-                    <Check className="text-green-500 mr-2" size={16} />
-                    <span className="text-sm">Good Agricultural Practices (GAP)</span>
+                  <span>Food safety certifications</span>
+                </div>
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 mt-1">
+                    <Check className="text-orange-500 mr-3" size={18} />
                   </div>
-                  <div className="flex items-center">
-                    <Check className="text-green-500 mr-2" size={16} />
-                    <span className="text-sm">Responsible production</span>
+                  <span>Industrial processing with traceability</span>
+                </div>
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 mt-1">
+                    <Check className="text-orange-500 mr-3" size={18} />
                   </div>
+                  <span>Global exports</span>
                 </div>
               </div>
             </div>
-            
-            <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition group">
-              <div className="h-56 bg-orange-600 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-t from-orange-900/80 to-transparent"></div>
-                <Image src={getImage('/interbai.webp')} alt="INTERBAI" className="w-full h-full object-contain group-hover:scale-105 transition duration-500" fill unoptimized={true} />
-                <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="text-2xl font-bold">INTERBAI</h3>
-                </div>
-              </div>
-              <div className="p-6">
-                <h4 className="text-xl font-semibold mb-3">Human Consumption Products</h4>
-                <p className="text-gray-600 mb-4">
-                  Division focused on processing agricultural products into food for human consumption.
-                  Specializes in flours, dehydrated products, and premixes.
-                </p>
-                <div className="mt-4 space-y-2">
-                  <div className="flex items-center">
-                    <Check className="text-green-500 mr-2" size={16} />
-                    <span className="text-sm">Food safety certifications</span>
-                  </div>
-                  <div className="flex items-center">
-                    <Check className="text-green-500 mr-2" size={16} />
-                    <span className="text-sm">Industrial processing with traceability</span>
-                  </div>
-                  <div className="flex items-center">
-                    <Check className="text-green-500 mr-2" size={16} />
-                    <span className="text-sm">Global exports</span>
-                  </div>
-                </div>
+          </div>
+          
+          {/* MELY FOODS */}
+          <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border border-blue-100 flex flex-col h-full">
+            <div className="h-64 bg-gradient-to-br from-blue-600 to-blue-500 relative overflow-hidden flex items-center justify-center p-6">
+              <div className="absolute inset-0 opacity-10 bg-pattern-dots"></div>
+              <div className="relative z-10 bg-white/10 backdrop-blur-sm rounded-xl p-6 w-4/5">
+                <Image 
+                  src="/mely-foods.webp" 
+                  alt="MELY FOODS" 
+                  width={280} 
+                  height={120} 
+                  className="object-contain w-full"
+                />
               </div>
             </div>
-            
-            <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition group">
-              <div className="h-56 bg-blue-600 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 to-transparent"></div>
-                <Image src={getImage('/mely-foods.webp')} alt="MELY FOODS" className="w-full h-full object-cover group-hover:scale-105 transition duration-500" fill unoptimized={true} />
-                <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="text-2xl font-bold">MELY FOODS</h3>
+            <div className="p-8 flex-grow flex flex-col">
+              <h3 className="text-2xl font-bold mb-4 text-blue-700">Animal Nutrition Products</h3>
+              <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
+                Specialized in developing and supplying functional ingredients for the animal 
+                nutrition industry, with a focus on pet food and treats using innovative, natural 
+                formulations from tropical roots.
+              </p>
+              <div className="space-y-3">
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 mt-1">
+                    <Check className="text-blue-500 mr-3" size={18} />
+                  </div>
+                  <span>Functional and natural ingredients</span>
                 </div>
-              </div>
-              <div className="p-6">
-                <h4 className="text-xl font-semibold mb-3">Animal Nutrition Products</h4>
-                <p className="text-gray-600 mb-4">
-                  Specialized in developing and supplying functional ingredients for the animal 
-                  nutrition industry, with a focus on pet food and treats.
-                </p>
-                <div className="mt-4 space-y-2">
-                  <div className="flex items-center">
-                    <Check className="text-green-500 mr-2" size={16} />
-                    <span className="text-sm">Functional and natural ingredients</span>
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 mt-1">
+                    <Check className="text-blue-500 mr-3" size={18} />
                   </div>
-                  <div className="flex items-center">
-                    <Check className="text-green-500 mr-2" size={16} />
-                    <span className="text-sm">Products for premium pet food</span>
+                  <span>Products for premium pet food</span>
+                </div>
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 mt-1">
+                    <Check className="text-blue-500 mr-3" size={18} />
                   </div>
-                  <div className="flex items-center">
-                    <Check className="text-green-500 mr-2" size={16} />
-                    <span className="text-sm">Sustainable and safe standards</span>
-                  </div>
+                  <span>Sustainable and safe standards</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* Products Showcase */}
       <section id="products" className="py-20 bg-white">
@@ -329,7 +366,7 @@ export default function HomePage() {
                 <div key={index} className="bg-green-50 p-4 rounded-lg text-center hover:bg-green-100 transition">
                   <div className="w-20 h-20 rounded-full bg-green-200 mx-auto mb-3 flex items-center justify-center">
                     <div className="w-16 h-16 rounded-full overflow-hidden">
-                      <Image src={getImage('/products.jpg')} alt={flour} className="w-full h-full object-cover" fill unoptimized={true} />
+                      <Image src={getImage('/products.jpg')} alt={flour} className="w-full h-full object-cover" height={64} width={64} unoptimized={true} />
                     </div>
                   </div>
                   <p className="font-medium">{flour}</p>
@@ -359,7 +396,7 @@ export default function HomePage() {
                 <div key={index} className="bg-blue-50 p-4 rounded-lg text-center hover:bg-blue-100 transition">
                   <div className="w-20 h-20 rounded-full bg-blue-200 mx-auto mb-3 flex items-center justify-center">
                     <div className="w-16 h-16 rounded-full overflow-hidden">
-                      <Image src={getImage('/products.jpg')} alt={treat} className="w-full h-full object-cover" fill unoptimized={true} />
+                      <Image src={getImage('/products.jpg')} alt={treat} className="w-full h-full object-cover" height={64} width={64} unoptimized={true} />
                     </div>
                   </div>
                   <p className="font-medium">{treat}</p>
