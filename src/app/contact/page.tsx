@@ -85,37 +85,7 @@ export default function ContactPage() {
                   </div>
                 </div>
               </div>
-              
-              {/* Executive Board */}
-              <div className="mt-10">
-                <h3 className="font-semibold text-lg mb-4">Executive Board</h3>
-                <div className="space-y-4">
-                  <div>
-                    <span className="font-bold">Rodolfo Interiano Baide</span><br />
-                    <span className="text-sm">CHIEF EXECUTIVE OFFICER (CEO)</span><br />
-                    <a href="mailto:r.interiano@ayragro.com" className="text-green-700 hover:underline">r.interiano@ayragro.com</a><br />
-                    <a href="tel:+50493721765" className="text-gray-600 hover:underline">+504-9372-1765</a>
-                  </div>
-                  <div>
-                    <span className="font-bold">Tony Medina</span><br />
-                    <span className="text-sm">CHIEF OPERATING OFFICER (COO)</span><br />
-                    <a href="mailto:t.medina@ayragro.com" className="text-green-700 hover:underline">t.medina@ayragro.com</a><br />
-                    <a href="tel:+50493666952" className="text-gray-600 hover:underline">+504-9366-6952</a>
-                  </div>
-                  <div>
-                    <span className="font-bold">Adalberto Arriaza</span><br />
-                    <span className="text-sm">GENERAL DIRECTOR</span><br />
-                    <a href="mailto:a.arriaza@ayragro.com" className="text-green-700 hover:underline">a.arriaza@ayragro.com</a><br />
-                    <a href="tel:+50493283861" className="text-gray-600 hover:underline">+504-9328-3861</a>
-                  </div>
-                  <div>
-                    <span className="font-bold">Thesla Maldonado</span><br />
-                    <span className="text-sm">Import/Export Manager</span><br />
-                    <a href="mailto:t.maldonado@ayragro.com" className="text-green-700 hover:underline">t.maldonado@ayragro.com</a><br />
-                    <a href="tel:+50497224638" className="text-gray-600 hover:underline">+504-9722-4638</a>
-                  </div>
-                </div>
-              </div>
+          
 
               <div className="mt-10">
                 <h3 className="font-semibold text-lg mb-4">Follow Us</h3>
@@ -159,6 +129,7 @@ export default function ContactPage() {
               </div>
             </div>
             
+            
             {/* Right Column - Form */}
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
@@ -167,6 +138,65 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+          
+              {/* Executive Board */}
+              <div className="mt-1 px-32">
+                <h3 className="font-semibold text-xl mb-4">Executive Board</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="bg-gray-50 rounded-lg p-4 hover:shadow-md transition">
+                    <span className="font-bold text-green-800 block">Rodolfo Interiano Baide</span>
+                    <span className="text-sm text-gray-600 uppercase font-semibold block mb-2">Chief Executive Officer</span>
+                    <div className="flex items-center mt-1">
+                      <Mail className="w-4 h-4 text-green-700 mr-2" />
+                      <a href="mailto:r.interiano@ayragro.com" className="text-green-700 hover:underline text-sm">r.interiano@ayragro.com</a>
+                    </div>
+                    <div className="flex items-center mt-1">
+                      <Phone className="w-4 h-4 text-gray-600 mr-2" />
+                      <a href="tel:+50493721765" className="text-gray-600 hover:underline text-sm">+504-9372-1765</a>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-gray-50 rounded-lg p-4 hover:shadow-md transition">
+                    <span className="font-bold text-green-800 block">Tony Medina</span>
+                    <span className="text-sm text-gray-600 uppercase font-semibold block mb-2">Chief Operating Officer</span>
+                    <div className="flex items-center mt-1">
+                      <Mail className="w-4 h-4 text-green-700 mr-2" />
+                      <a href="mailto:t.medina@ayragro.com" className="text-green-700 hover:underline text-sm">t.medina@ayragro.com</a>
+                    </div>
+                    <div className="flex items-center mt-1">
+                      <Phone className="w-4 h-4 text-gray-600 mr-2" />
+                      <a href="tel:+50493666952" className="text-gray-600 hover:underline text-sm">+504-9366-6952</a>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-gray-50 rounded-lg p-4 hover:shadow-md transition">
+                    <span className="font-bold text-green-800 block">Adalberto Arriaza</span>
+                    <span className="text-sm text-gray-600 uppercase font-semibold block mb-2">General Director</span>
+                    <div className="flex items-center mt-1">
+                      <Mail className="w-4 h-4 text-green-700 mr-2" />
+                      <a href="mailto:a.arriaza@ayragro.com" className="text-green-700 hover:underline text-sm">a.arriaza@ayragro.com</a>
+                    </div>
+                    <div className="flex items-center mt-1">
+                      <Phone className="w-4 h-4 text-gray-600 mr-2" />
+                      <a href="tel:+50493283861" className="text-gray-600 hover:underline text-sm">+504-9328-3861</a>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-gray-50 rounded-lg p-4 hover:shadow-md transition">
+                    <span className="font-bold text-green-800 block">Thesla Maldonado</span>
+                    <span className="text-sm text-gray-600 uppercase font-semibold block mb-2">Import/Export Manager</span>
+                    <div className="flex items-center mt-1">
+                      <Mail className="w-4 h-4 text-green-700 mr-2" />
+                      <a href="mailto:t.maldonado@ayragro.com" className="text-green-700 hover:underline text-sm">t.maldonado@ayragro.com</a>
+                    </div>
+                    <div className="flex items-center mt-1">
+                      <Phone className="w-4 h-4 text-gray-600 mr-2" />
+                      <a href="tel:+50497224638" className="text-gray-600 hover:underline text-sm">+504-9722-4638</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
       
       {/* Map Section */}
       <section className="bg-gray-50 py-16">
@@ -193,7 +223,9 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
       
+          
       {/* CTA Section */}
       <section className="bg-green-800 text-white py-16">
         <div className="container mx-auto px-4 text-center">
@@ -220,6 +252,7 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+    
     </div>
   );
 }
