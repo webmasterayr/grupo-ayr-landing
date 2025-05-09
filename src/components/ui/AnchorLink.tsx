@@ -23,7 +23,6 @@ const AnchorLink = React.forwardRef<HTMLAnchorElement, AnchorLinkProps>(
           const id = href.substring(hashIndex + 1);     
           handleLandingElementIntoView(id, offset);
           // Update hash in URL without scrolling
-          window.history.pushState(null, "", href);
         }
       }
       if (rest.onClick) rest.onClick(e);

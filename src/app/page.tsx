@@ -626,9 +626,9 @@ export default function HomePage() {
             and innovation that sets Grupo AYR apart.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="px-8 py-3 bg-white text-green-800 rounded-md font-medium hover:bg-green-100 transition shadow-lg">
+            <AnchorLink href="/contact" className="px-8 py-3 bg-white text-green-800 rounded-md font-medium hover:bg-green-100 transition shadow-lg">
               Request a Sample
-            </button>
+            </AnchorLink>
             <DownloadCatalogButton className="px-8 py-3 bg-transparent border-2 border-white text-white rounded-md font-medium hover:bg-white/10 transition">
               Download Our Catalog
             </DownloadCatalogButton>
