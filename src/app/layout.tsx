@@ -5,6 +5,7 @@ import './globals.css';
 import './globals.css';
 import LandingProviders from '@/modules/landing/presentation/providers/landing-provider/landing-provider';
 import NavbarContent from './NavbarContent';
+import FloatingContactButton from './Floating-Contact';
 // import { Toaster } from "@/components/ui/sonner";
 // import { GoogleAnalytics } from "@next/third-parties/google";
 
@@ -139,6 +140,7 @@ export default function RootLayout({
         <LandingProviders>
           <main suppressHydrationWarning={true} className="md:gap-y-0 flex flex-col w-full max-w-full grow h-fit bg-white">
             <NavbarContent transparent />
+            <FloatingContactButton />
             {children}
           </main>
         </LandingProviders>
