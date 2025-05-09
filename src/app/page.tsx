@@ -49,7 +49,7 @@ export default function HomePage() {
               <a href="#products" className="hover:text-green-300 transition">Products</a>
               <a href="#certifications" className="hover:text-green-300 transition">Certifications</a>
               <a href="#sustainability" className="hover:text-green-300 transition">Sustainability</a>
-              <a href="#contact" className="hover:text-green-300 transition">Contact</a>
+              <a href="/contact" className="hover:text-green-300 transition">Contact</a>
             </div>
             <div className="lg:hidden text-white">
               <button className="p-2">

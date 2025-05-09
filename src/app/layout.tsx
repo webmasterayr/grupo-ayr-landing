@@ -4,6 +4,7 @@ import './globals.css';
 
 import './globals.css';
 import LandingProviders from '@/modules/landing/presentation/providers/landing-provider/landing-provider';
+import NavbarContent from './NavbarContent';
 // import { Toaster } from "@/components/ui/sonner";
 // import { GoogleAnalytics } from "@next/third-parties/google";
 
@@ -137,6 +138,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <LandingProviders>
           <main suppressHydrationWarning={true} className="md:gap-y-0 flex flex-col w-full max-w-full grow h-fit bg-white">
+            <NavbarContent />
             {children}
           </main>
         </LandingProviders>
