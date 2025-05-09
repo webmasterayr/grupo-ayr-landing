@@ -609,11 +609,11 @@ export default function HomePage() {
       </div>
     </div>
     
-    <div className="mt-16 text-center">
+    {/* <div className="mt-16 text-center">
       <button className="px-8 py-3 bg-white text-green-800 rounded-md font-medium hover:bg-green-100 transition shadow-md">
         Learn About Our Sustainability Initiatives
       </button>
-    </div>
+    </div> */}
   </div>
 </section>
 
