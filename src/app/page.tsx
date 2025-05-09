@@ -499,7 +499,7 @@ export default function HomePage() {
               <div className="flex flex-col md:flex-row items-center">
                 <div className="md:w-1/2 md:pr-12 md:text-right order-1 md:order-2">
                   <div className="rounded-lg overflow-hidden h-48">
-                    <Image src={getImage('/global-distribution.jpg')} alt="Global distribution" className="w-full h-full object-cover" fill unoptimized={true} />
+                    <Image src={getImage('/global-distribution.webp')} alt="Global distribution" className="w-full h-full object-cover" height={256} width={256} unoptimized={true} />
                   </div>
                 </div>
                 <div className="hidden md:flex items-center justify-center z-10 order-2 md:order-3">
