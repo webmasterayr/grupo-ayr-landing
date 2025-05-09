@@ -40,7 +40,7 @@ export default function HomePage() {
           {/* Navigation */}
           <nav className="flex justify-between items-center py-6">
             <div className="flex items-center">
-              <BrandLogo mode="horizontal" width={160} height={40} />
+              <Image src="/logo.webp" alt="Grupo AYR Logo" width={160} height={40} className="h-[5.5rem] w-auto" />
             </div>
             <div className="hidden lg:flex space-x-8 text-white font-medium">
               <a href="#about" className="hover:text-green-300 transition">About Us</a>

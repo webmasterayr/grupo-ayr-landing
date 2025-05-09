@@ -2,6 +2,7 @@
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { useLandingNavStore } from '../../../stores/nav-bar.store';
+import Image from 'next/image';
 
 interface BrandLogoProps {
   className?: string;
@@ -46,7 +47,7 @@ export default function BrandLogo(props: BrandLogoProps) {
 
 function BrandLogoVertical(props: BrandLogoProps) {
   return (
-    <img
+    <Image
       src="/logo.webp"
       alt="Grupo AYR Logo Vertical"
       width={props.width || 120}
@@ -59,8 +60,8 @@ function BrandLogoVertical(props: BrandLogoProps) {
 
 function BrandLogoHorizontal(props: BrandLogoProps) {
   return (
-    <img
-      src="/logo-placeholder.png"
+    <Image
+      src="/logo.webp"
       alt="Grupo AYR Logo Horizontal"
       width={props.width || 120}
       height={props.height || 40}
