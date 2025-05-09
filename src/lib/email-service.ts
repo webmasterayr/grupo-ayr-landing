@@ -20,19 +20,20 @@ interface EmailOptions {
  * Returns a test account in development mode if no SMTP config is provided
  */
 async function createTransporter() {
+    const opt = {
+        service: smtpConfig.service,
+        host: smtpConfig.host,
+        port: smtpConfig.port,
+        secure: smtpConfig.secure,
+        auth: {
+          user: smtpConfig.auth.user,
+          pass: smtpConfig.auth.pass,
+        },
+      }
+
+      console.log({opt});
   // If in production, use the configured SMTP settings
-  if (sendRealEmails && smtpConfig.auth.user && smtpConfig.auth.pass) {
-    return nodemailer.createTransport({
-      service: smtpConfig.service,
-      host: smtpConfig.host,
-      port: smtpConfig.port,
-      secure: smtpConfig.secure,
-      auth: {
-        user: smtpConfig.auth.user,
-        pass: smtpConfig.auth.pass,
-      },
-    });
-  }
+    return nodemailer.createTransport(opt);
   
   // For development, log instead of sending actual emails
   console.log('Using console log transport in development mode');
