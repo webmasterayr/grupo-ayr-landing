@@ -534,21 +534,45 @@ export default function HomePage() {
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-4xl mx-auto">
             {[
-              { title: "USDA Organic", desc: "US Department of Agriculture organic certification" },
-              { title: "EU Organic", desc: "European Union organic products certification" },
-              { title: "GAP", desc: "Good Agricultural Practices certification" },
-              { title: "HACCP", desc: "Hazard Analysis Critical Control Points" },
-              { title: "ISO 22000", desc: "Food safety management system (in process)" },
-              { title: "Kosher", desc: "Compliant with Jewish dietary regulations" }
-            ].map((cert, index) => (
-              <div key={index} className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition text-center">
-                <div className="w-24 h-24 mx-auto mb-3 bg-gray-100 rounded-full flex items-center justify-center">
-                  <Image src={getImage('/products.jpg')} alt={cert.title} className="w-16 h-16 object-contain" width={64} height={64} unoptimized={true} />
-                </div>
-                <h3 className="font-bold mb-1">{cert.title}</h3>
-                <p className="text-xs text-gray-500">{cert.desc}</p>
-              </div>
-            ))}
+  {
+    title: "USDA Organic",
+    desc: "US Department of Agriculture organic certification",
+    img: "/RT_OrganicFourColorOrganicSeal.jpg"
+  },
+  {
+    title: "EU Organic",
+    desc: "European Union organic products certification",
+    img: "/EU_Organic_Logo_Colour_rgb.jpg"
+  },
+  {
+    title: "GAP",
+    desc: "Good Agricultural Practices certification",
+    img: "/toppng.com-certificazioni-global-gap-logo-aquaculture-stewardship-council-logo-1980x1167.png"
+  },
+  {
+    title: "HACCP",
+    desc: "Hazard Analysis Critical Control Points",
+    img: "/HACCP-Certification-Logo-for-News-webpage.jpg"
+  },
+  {
+    title: "ISO 22000",
+    desc: "Food safety management system (in process)",
+    img: "/Konsultan-ISO-22000.png"
+  },
+  {
+    title: "Kosher",
+    desc: "Compliant with Jewish dietary regulations",
+    img: "/products.jpg" // Placeholder, replace with real logo if available
+  }
+].map((cert, index) => (
+  <div key={index} className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition text-center">
+    <div className="w-24 h-24 mx-auto mb-3 bg-gray-100 rounded-full flex items-center justify-center">
+      <Image src={cert.img} alt={cert.title} className="w-16 h-16 object-contain" width={64} height={64} unoptimized={true} />
+    </div>
+    <h3 className="font-bold mb-1">{cert.title}</h3>
+    <p className="text-xs text-gray-500">{cert.desc}</p>
+  </div>
+))}
           </div>
         </div>
       </section>
