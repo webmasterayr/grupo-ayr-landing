@@ -1,6 +1,7 @@
 import { Award, Check, ChevronDown, Facebook, Globe, Instagram, Leaf, Linkedin, Twitter, } from "lucide-react";
 import JsonLd from "./components/seo/JsonLd";
 import Image from "next/image";
+import BrandLogo from "@/modules/landing/presentation/components/shared/brand-logo/brand-logo";
 
 const jsonLdData = {
   "@context": "https://schema.org",
@@ -20,20 +21,26 @@ const jsonLdData = {
 };
 
 export default function HomePage() {
+  // Change this to 'prod' for actual images
+  const mode: 'placeholder' | 'prod' = 'placeholder';
+  // Helper for image src
+  const getImage = (src: string) =>
+    mode === 'placeholder' ? 'https://placehold.co/600x400' : src;
+  // Helper for small icons
+  const getIcon = (src: string, size = 24) =>
+    mode === 'placeholder' ? `https://placehold.co/${size}x${size}` : src;
   return (
     <div className="flex flex-col min-h-screen bg-white text-gray-800">
       <JsonLd data={jsonLdData} />
       {/* Hero Section */}
       <header className="relative h-screen">
         <div className="absolute inset-0 bg-gradient-to-r from-green-900/80 to-green-700/80 z-10"></div>
-        <div className="absolute inset-0 bg-[url('/api/placeholder/1920/1080')] bg-cover bg-center bg-no-repeat"></div>
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{backgroundImage: `url(${mode === 'placeholder' ? 'https://placehold.co/1200x630' : '/api/placeholder/1920/1080'})`}}></div>
         <div className="relative z-20 container mx-auto px-4 h-full flex flex-col">
           {/* Navigation */}
           <nav className="flex justify-between items-center py-6">
             <div className="flex items-center">
-              <div className="w-48 h-12 bg-white/90 rounded-md flex items-center justify-center text-green-800 font-bold text-xl">
-                GRUPO AYR LOGO
-              </div>
+              <BrandLogo mode="horizontal" width={160} height={40} />
             </div>
             <div className="hidden lg:flex space-x-8 text-white font-medium">
               <a href="#about" className="hover:text-green-300 transition">About Us</a>
@@ -171,16 +178,16 @@ export default function HomePage() {
             
             <div className="lg:w-1/2 grid grid-cols-2 gap-4">
               <div className="rounded-lg overflow-hidden h-64">
-                <Image src="/farming-operations.jpg" alt="Farming operations" className="w-full h-full object-cover" fill unoptimized={true} />
+                <Image src={getImage('/farming-operations.jpg')} alt="Farming operations" className="w-full h-full object-cover" fill unoptimized={true} />
               </div>
               <div className="rounded-lg overflow-hidden h-64 mt-8">
-                <Image src="/processing-facility.jpg" alt="Processing facility" className="w-full h-full object-cover" fill unoptimized={true} />
+                <Image src={getImage('/processing-facility.jpg')} alt="Processing facility" className="w-full h-full object-cover" fill unoptimized={true} />
               </div>
               <div className="rounded-lg overflow-hidden h-64">
-                <Image src="/products.jpg" alt="Products" className="w-full h-full object-cover" fill unoptimized={true} />
+                <Image src={getImage('/products.jpg')} alt="Products" className="w-full h-full object-cover" fill unoptimized={true} />
               </div>
               <div className="rounded-lg overflow-hidden h-64 mt-8">
-                <Image src="/farm-workers.jpg" alt="Farm workers" className="w-full h-full object-cover" fill unoptimized={true} />
+                <Image src={getImage('/farm-workers.jpg')} alt="Farm workers" className="w-full h-full object-cover" fill unoptimized={true} />
               </div>
             </div>
           </div>
@@ -202,7 +209,7 @@ export default function HomePage() {
             <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition group">
               <div className="h-56 bg-green-600 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-green-900/80 to-transparent"></div>
-                <Image src="/semig.jpg" alt="SEMIG" className="w-full h-full object-cover group-hover:scale-105 transition duration-500" fill unoptimized={true} />
+                <Image src={getImage('/semig.jpg')} alt="SEMIG" className="w-full h-full object-cover group-hover:scale-105 transition duration-500" fill unoptimized={true} />
                 <div className="absolute bottom-4 left-4 text-white">
                   <h3 className="text-2xl font-bold">SEMIG</h3>
                 </div>
@@ -233,7 +240,7 @@ export default function HomePage() {
             <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition group">
               <div className="h-56 bg-orange-600 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-orange-900/80 to-transparent"></div>
-                <Image src="/interbai.jpg" alt="INTERBAI" className="w-full h-full object-cover group-hover:scale-105 transition duration-500" fill unoptimized={true} />
+                <Image src={getImage('/interbai.jpg')} alt="INTERBAI" className="w-full h-full object-cover group-hover:scale-105 transition duration-500" fill unoptimized={true} />
                 <div className="absolute bottom-4 left-4 text-white">
                   <h3 className="text-2xl font-bold">INTERBAI</h3>
                 </div>
@@ -264,7 +271,7 @@ export default function HomePage() {
             <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition group">
               <div className="h-56 bg-blue-600 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 to-transparent"></div>
-                <Image src="/mely-foods.jpg" alt="MELY FOODS" className="w-full h-full object-cover group-hover:scale-105 transition duration-500" fill unoptimized={true} />
+                <Image src={getImage('/mely-foods.jpg')} alt="MELY FOODS" className="w-full h-full object-cover group-hover:scale-105 transition duration-500" fill unoptimized={true} />
                 <div className="absolute bottom-4 left-4 text-white">
                   <h3 className="text-2xl font-bold">MELY FOODS</h3>
                 </div>
@@ -322,7 +329,7 @@ export default function HomePage() {
                 <div key={index} className="bg-green-50 p-4 rounded-lg text-center hover:bg-green-100 transition">
                   <div className="w-20 h-20 rounded-full bg-green-200 mx-auto mb-3 flex items-center justify-center">
                     <div className="w-16 h-16 rounded-full overflow-hidden">
-                      <Image src="/products.jpg" alt={flour} className="w-full h-full object-cover" fill unoptimized={true} />
+                      <Image src={getImage('/products.jpg')} alt={flour} className="w-full h-full object-cover" fill unoptimized={true} />
                     </div>
                   </div>
                   <p className="font-medium">{flour}</p>
@@ -352,7 +359,7 @@ export default function HomePage() {
                 <div key={index} className="bg-blue-50 p-4 rounded-lg text-center hover:bg-blue-100 transition">
                   <div className="w-20 h-20 rounded-full bg-blue-200 mx-auto mb-3 flex items-center justify-center">
                     <div className="w-16 h-16 rounded-full overflow-hidden">
-                      <Image src="/products.jpg" alt={treat} className="w-full h-full object-cover" fill unoptimized={true} />
+                      <Image src={getImage('/products.jpg')} alt={treat} className="w-full h-full object-cover" fill unoptimized={true} />
                     </div>
                   </div>
                   <p className="font-medium">{treat}</p>
@@ -399,7 +406,7 @@ export default function HomePage() {
                 </div>
                 <div className="md:w-1/2 md:pl-12 mt-4 md:mt-0">
                   <div className="rounded-lg overflow-hidden h-48">
-                    <Image src="/planting-process.jpg" alt="Planting process" className="w-full h-full object-cover" fill unoptimized={true} />
+                    <Image src={getImage('/planting-process.jpg')} alt="Planting process" className="w-full h-full object-cover" fill unoptimized={true} />
                   </div>
                 </div>
               </div>
@@ -408,7 +415,7 @@ export default function HomePage() {
               <div className="flex flex-col md:flex-row items-center">
                 <div className="md:w-1/2 md:pr-12 md:text-right order-1 md:order-2">
                   <div className="rounded-lg overflow-hidden h-48">
-                    <Image src="/growing-process.jpg" alt="Growing process" className="w-full h-full object-cover" fill unoptimized={true} />
+                    <Image src={getImage('/growing-process.jpg')} alt="Growing process" className="w-full h-full object-cover" fill unoptimized={true} />
                   </div>
                 </div>
                 <div className="hidden md:flex items-center justify-center z-10 order-2 md:order-3">
@@ -441,7 +448,7 @@ export default function HomePage() {
                 </div>
                 <div className="md:w-1/2 md:pl-12 mt-4 md:mt-0">
                   <div className="rounded-lg overflow-hidden h-48">
-                    <Image src="/harvesting-process.jpg" alt="Harvesting process" className="w-full h-full object-cover" fill unoptimized={true} />
+                    <Image src={getImage('/harvesting-process.jpg')} alt="Harvesting process" className="w-full h-full object-cover" fill unoptimized={true} />
                   </div>
                 </div>
               </div>
@@ -450,7 +457,7 @@ export default function HomePage() {
               <div className="flex flex-col md:flex-row items-center">
                 <div className="md:w-1/2 md:pr-12 md:text-right order-1 md:order-2">
                   <div className="rounded-lg overflow-hidden h-48">
-                    <Image src="/processing.jpg" alt="Processing" className="w-full h-full object-cover" fill unoptimized={true} />
+                    <Image src={getImage('/processing.jpg')} alt="Processing" className="w-full h-full object-cover" fill unoptimized={true} />
                   </div>
                 </div>
                 <div className="hidden md:flex items-center justify-center z-10 order-2 md:order-3">
@@ -483,7 +490,7 @@ export default function HomePage() {
                 </div>
                 <div className="md:w-1/2 md:pl-12 mt-4 md:mt-0">
                   <div className="rounded-lg overflow-hidden h-48">
-                    <Image src="/quality-control.jpg" alt="Quality control" className="w-full h-full object-cover" fill unoptimized={true} />
+                    <Image src={getImage('/quality-control.jpg')} alt="Quality control" className="w-full h-full object-cover" fill unoptimized={true} />
                   </div>
                 </div>
               </div>
@@ -492,7 +499,7 @@ export default function HomePage() {
               <div className="flex flex-col md:flex-row items-center">
                 <div className="md:w-1/2 md:pr-12 md:text-right order-1 md:order-2">
                   <div className="rounded-lg overflow-hidden h-48">
-                    <Image src="/global-distribution.jpg" alt="Global distribution" className="w-full h-full object-cover" fill unoptimized={true} />
+                    <Image src={getImage('/global-distribution.jpg')} alt="Global distribution" className="w-full h-full object-cover" fill unoptimized={true} />
                   </div>
                 </div>
                 <div className="hidden md:flex items-center justify-center z-10 order-2 md:order-3">
@@ -535,7 +542,7 @@ export default function HomePage() {
             ].map((cert, index) => (
               <div key={index} className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition text-center">
                 <div className="w-24 h-24 mx-auto mb-3 bg-gray-100 rounded-full flex items-center justify-center">
-                  <Image src="/products.jpg" alt={cert.title} className="w-16 h-16 object-contain" width={64} height={64} unoptimized={true} />
+                  <Image src={getImage('/products.jpg')} alt={cert.title} className="w-16 h-16 object-contain" width={64} height={64} unoptimized={true} />
                 </div>
                 <h3 className="font-bold mb-1">{cert.title}</h3>
                 <p className="text-xs text-gray-500">{cert.desc}</p>
@@ -581,7 +588,7 @@ export default function HomePage() {
       
       <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
         <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mb-4">
-          <Image src="/community-icon.jpg" alt="Community icon" className="w-6 h-6" width={24} height={24} unoptimized={true} />
+          <Image src={getIcon('/community-icon.jpg', 24)} alt="Community icon" className="w-6 h-6" width={24} height={24} unoptimized={true} />
         </div>
         <h3 className="text-xl font-bold mb-3">Social Responsibility</h3>
         <p className="text-green-100">
@@ -592,7 +599,7 @@ export default function HomePage() {
       
       <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
         <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mb-4">
-          <Image src="/ethical-trade-icon.jpg" alt="Ethical trade icon" className="w-6 h-6" width={24} height={24} unoptimized={true} />
+          <Image src={getIcon('/ethical-trade-icon.jpg', 24)} alt="Ethical trade icon" className="w-6 h-6" width={24} height={24} unoptimized={true} />
         </div>
         <h3 className="text-xl font-bold mb-3">Fair & Responsible Trade</h3>
         <p className="text-green-100">
@@ -632,8 +639,8 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
             <div>
-              <div className="w-48 h-12 bg-white/90 rounded-md flex items-center justify-center text-green-800 font-bold text-xl mb-6">
-                GRUPO AYR LOGO
+              <div className="w-48 h-12 bg-white/90 rounded-md flex items-center justify-center mb-6">
+                <BrandLogo mode="horizontal" width={160} height={40} />
               </div>
               <p className="text-gray-400 mb-6">
                 Agroindustry with Purpose: From our Honduran fields to global markets, 

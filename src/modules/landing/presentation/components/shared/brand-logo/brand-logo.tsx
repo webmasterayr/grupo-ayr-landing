@@ -34,7 +34,7 @@ export default function BrandLogo(props: BrandLogoProps) {
 
   return (
     <Link
-      href={pathname === '/landing' ? '#' : '/landing'}
+      href={pathname === '/' ? '' : '/'}
       onClick={() => {
         setIsOpenMobileMenu(false);
       }}
@@ -45,9 +45,27 @@ export default function BrandLogo(props: BrandLogoProps) {
 }
 
 function BrandLogoVertical(props: BrandLogoProps) {
-  return <></>;
+  return (
+    <img
+      src="/logo.webp"
+      alt="Grupo AYR Logo Vertical"
+      width={props.width || 120}
+      height={props.height || 40}
+      className={props.className}
+      style={{ objectFit: 'contain' }}
+    />
+  );
 }
 
 function BrandLogoHorizontal(props: BrandLogoProps) {
-  return <></>;
+  return (
+    <img
+      src="/logo-placeholder.png"
+      alt="Grupo AYR Logo Horizontal"
+      width={props.width || 120}
+      height={props.height || 40}
+      className={props.className}
+      style={{ objectFit: 'contain' }}
+    />
+  );
 }
