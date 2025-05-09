@@ -406,7 +406,7 @@ export default function HomePage() {
                 </div>
                 <div className="md:w-1/2 md:pl-12 mt-4 md:mt-0">
                   <div className="rounded-lg overflow-hidden h-48">
-                    <Image src={getImage('/planting-process.jpg')} alt="Planting process" className="w-full h-full object-cover" fill unoptimized={true} />
+                    <Image src={getImage('/planting-process.webp')} alt="Planting process" className="w-full h-full object-cover" height={256} width={256} unoptimized={true} />
                   </div>
                 </div>
               </div>
@@ -415,7 +415,7 @@ export default function HomePage() {
               <div className="flex flex-col md:flex-row items-center">
                 <div className="md:w-1/2 md:pr-12 md:text-right order-1 md:order-2">
                   <div className="rounded-lg overflow-hidden h-48">
-                    <Image src={getImage('/growing-process.jpg')} alt="Growing process" className="w-full h-full object-cover" fill unoptimized={true} />
+                    <Image src={getImage('/growing-process.webp')} alt="Growing process" className="w-full h-full object-cover" height={256} width={256} unoptimized={true} />
                   </div>
                 </div>
                 <div className="hidden md:flex items-center justify-center z-10 order-2 md:order-3">
@@ -448,7 +448,7 @@ export default function HomePage() {
                 </div>
                 <div className="md:w-1/2 md:pl-12 mt-4 md:mt-0">
                   <div className="rounded-lg overflow-hidden h-48">
-                    <Image src={getImage('/harvesting-process.jpg')} alt="Harvesting process" className="w-full h-full object-cover" fill unoptimized={true} />
+                    <Image src={getImage('/harvesting-process.webp')} alt="Harvesting process" className="w-full h-full object-cover" height={256} width={256} unoptimized={true} />
                   </div>
                 </div>
               </div>
@@ -457,7 +457,7 @@ export default function HomePage() {
               <div className="flex flex-col md:flex-row items-center">
                 <div className="md:w-1/2 md:pr-12 md:text-right order-1 md:order-2">
                   <div className="rounded-lg overflow-hidden h-48">
-                    <Image src={getImage('/processing.jpg')} alt="Processing" className="w-full h-full object-cover" fill unoptimized={true} />
+                    <Image src={getImage('/processing.webp')} alt="Processing" className="w-full h-full object-cover" height={256} width={256} unoptimized={true} />
                   </div>
                 </div>
                 <div className="hidden md:flex items-center justify-center z-10 order-2 md:order-3">
