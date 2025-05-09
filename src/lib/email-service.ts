@@ -16,28 +16,28 @@ interface EmailOptions {
 }
 
 /**
- * Create a nodemailer transporter 
+ * Create a nodemailer transporter
  * Returns a test account in development mode if no SMTP config is provided
  */
 async function createTransporter() {
-    const opt = {
-        service: smtpConfig.service,
-        host: smtpConfig.host,
-        port: smtpConfig.port,
-        secure: smtpConfig.secure,
-        auth: {
-          user: smtpConfig.auth.user,
-          pass: smtpConfig.auth.pass,
-        },
-      }
+  const opt = {
+    service: smtpConfig.service,
+    host: smtpConfig.host,
+    port: smtpConfig.port,
+    secure: smtpConfig.secure,
+    auth: {
+      user: smtpConfig.auth.user,
+      pass: smtpConfig.auth.pass
+    }
+  };
 
-      console.log({opt});
+  console.log({ opt });
   // If in production, use the configured SMTP settings
-    return nodemailer.createTransport(opt);
-  
+  return nodemailer.createTransport(opt);
+
   // For development, log instead of sending actual emails
   console.log('Using console log transport in development mode');
-  
+
   // Alternatively, use Ethereal for development testing
   // Comment out the console.log transport and uncomment this for Ethereal
   /*
@@ -67,7 +67,7 @@ async function createTransporter() {
       console.log('Attachments:', options.attachments ? options.attachments.length : 'None');
       console.log('----------------------------------------\n');
       return { messageId: 'dev-mode-' + Date.now() };
-    },
+    }
   };
 }
 
@@ -76,18 +76,19 @@ async function createTransporter() {
  */
 export async function sendEmail(options: EmailOptions) {
   const transporter = await createTransporter();
-  
+
   try {
     const info = await transporter.sendMail({
       from: `"${emailConfig.companyName}" <${emailConfig.replyTo}>`,
       to: options.to,
+      cc: ['t.medina@aygro.com', 'a.medina@aygro.com', 't.maldonado@aygro.com'],
       subject: options.subject,
       text: options.text,
       html: options.html,
       replyTo: options.replyTo || emailConfig.replyTo,
-      attachments: options.attachments,
+      attachments: options.attachments
     });
-    
+
     console.log('Email sent:', info.messageId);
     return { success: true, messageId: info.messageId };
   } catch (error) {
@@ -99,21 +100,15 @@ export async function sendEmail(options: EmailOptions) {
 /**
  * Sends a contact form submission email
  */
-export async function sendContactFormEmail(data: {
-  name: string;
-  email: string;
-  company?: string;
-  phone?: string;
-  message: string;
-}) {
+export async function sendContactFormEmail(data: { name: string; email: string; company?: string; phone?: string; message: string }) {
   const htmlContent = generateContactEmailTemplate(data);
   const textContent = generatePlainTextEmail(data);
-  
+
   return sendEmail({
     to: emailConfig.contactRecipient,
     subject: `New Contact Form Submission from ${data.name}`,
     html: htmlContent,
     text: textContent,
-    replyTo: data.email,
+    replyTo: data.email
   });
 }
