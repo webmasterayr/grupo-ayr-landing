@@ -18,9 +18,9 @@ const AnchorLink = React.forwardRef<HTMLAnchorElement, AnchorLinkProps>(({ href,
   const pathName = usePathname();
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (isAnchor && pathName == '/') {
+    if (isAnchor) {
       const hashIndex = href.indexOf('#');
-      if (hashIndex !== -1) {
+      if (hashIndex !== -1 && pathName == '/') {
         e.preventDefault();
         const id = href.substring(hashIndex + 1);
         handleLandingElementIntoView(id, offset);

@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.grupoayr.hn'),
   title: {
     template: '%s | Grupo AYR',
-    default: 'Grupo AYR | Agroindustry with Purpose',
+    default: 'Grupo AYR | Agroindustry with Purpose'
   },
   description: 'From our fields to your table. Sustainably grown and processed tropical roots, delivered as premium ingredients worldwide.',
   keywords: ['Agroindustry', 'Grupo AYR', 'Honduras', 'tropical roots', 'sustainability', 'cassava', 'flour', 'export', 'premium ingredients'],
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   formatDetection: {
     email: false,
     address: false,
-    telephone: false,
+    telephone: false
   },
   openGraph: {
     title: 'Grupo AYR | Agroindustry with Purpose',
@@ -52,11 +52,11 @@ export const metadata: Metadata = {
         url: 'https://www.grupoayr.hn/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Grupo AYR - Agroindustry with Purpose',
-      },
+        alt: 'Grupo AYR - Agroindustry with Purpose'
+      }
     ],
     locale: 'es_HN',
-    type: 'website',
+    type: 'website'
   },
   twitter: {
     card: 'summary_large_image',
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     description: 'From our fields to your table. Sustainably grown and processed tropical roots, delivered as premium ingredients worldwide.',
     images: ['https://www.grupoayr.hn/twitter-image.png'],
     site: '@grupoayr',
-    creator: '@grupoayr',
+    creator: '@grupoayr'
   },
   robots: {
     index: true,
@@ -72,10 +72,10 @@ export const metadata: Metadata = {
     'max-image-preview': 'large',
     'max-snippet': -1,
     'max-video-preview': -1,
-    googleBot: 'index, follow',
+    googleBot: 'index, follow'
   },
   alternates: {
-    canonical: 'https://www.grupoayr.hn',
+    canonical: 'https://www.grupoayr.hn'
   },
   icons: {
     icon: [
@@ -137,7 +137,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased scroll-smooth`}>
         <LandingProviders>
           <main suppressHydrationWarning={true} className="md:gap-y-0 flex flex-col w-full max-w-full grow h-fit bg-white">
             <NavbarContent transparent />
