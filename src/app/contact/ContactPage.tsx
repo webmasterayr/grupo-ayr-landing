@@ -180,7 +180,7 @@ export default function ContactPage() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a
-              href="#products"
+              href="/#products"
               className="px-8 py-3 bg-white text-green-800 rounded-md font-medium hover:bg-green-100 transition shadow-md"
             >
               Explore Products
