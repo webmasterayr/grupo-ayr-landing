@@ -490,7 +490,7 @@ export default function HomePage() {
                 </div>
                 <div className="md:w-1/2 md:pl-12 mt-4 md:mt-0">
                   <div className="rounded-lg overflow-hidden h-48">
-                    <Image src={getImage('/quality-control.jpg')} alt="Quality control" className="w-full h-full object-cover" fill unoptimized={true} />
+                    <Image src={getImage('/quality-control.webp')} alt="Quality control" className="w-full h-full object-cover" height={256} width={256} unoptimized={true} />
                   </div>
                 </div>
               </div>
