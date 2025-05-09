@@ -13,7 +13,7 @@ export default function ContactPage() {
       <ContactPageSchema />
       
       {/* Hero Section */}
-      <section className="relative bg-green-800 text-white py-20">
+      <section className="relative bg-green-800 text-white py-20 pt-28">
         <div className="absolute inset-0 bg-gradient-to-r from-green-900/90 to-green-700/90 z-10"></div>
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50" 

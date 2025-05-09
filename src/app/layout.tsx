@@ -138,7 +138,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <LandingProviders>
           <main suppressHydrationWarning={true} className="md:gap-y-0 flex flex-col w-full max-w-full grow h-fit bg-white">
-            <NavbarContent />
+            <NavbarContent transparent />
             {children}
           </main>
         </LandingProviders>

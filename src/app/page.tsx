@@ -1,8 +1,10 @@
-import { Award, Check, ChevronDown, Facebook, Globe, Handshake, Instagram, Leaf, Linkedin, Scale, Twitter, } from "lucide-react";
+import { Award, Check, ChevronDown, Facebook, Globe, Handshake, Instagram, Leaf, Linkedin, Navigation, Scale, Twitter, } from "lucide-react";
 import JsonLd from "./components/seo/JsonLd";
 import Image from "next/image";
 import BrandLogo from "@/modules/landing/presentation/components/shared/brand-logo/brand-logo";
 import DownloadCatalogButton from "@/components/DownloadCatalogButton";
+import { title } from "process";
+import Hero from "./Hero";
 
 const jsonLdData = {
   "@context": "https://schema.org",
@@ -34,58 +36,19 @@ export default function HomePage() {
     <div className="flex flex-col min-h-screen bg-white text-gray-800">
       <JsonLd data={jsonLdData} />
       {/* Hero Section */}
-      <header className="relative h-screen">
-        <div className="absolute inset-0 bg-gradient-to-r from-green-900/80 to-green-700/80 z-10"></div>
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{backgroundImage: `url(${mode === 'placeholder' ? 'https://placehold.co/1200x630' : '/api/placeholder/1920/1080'})`}}></div>
-        <div className="relative z-20 container mx-auto px-4 h-full flex flex-col">
-          {/* Navigation */}
-          <nav className="flex justify-between items-center py-6">
-            <div className="flex items-center">
-              <Image src="/logo.webp" alt="Grupo AYR Logo" width={160} height={40} className="h-[5.5rem] w-auto" />
-            </div>
-            <div className="hidden lg:flex space-x-8 text-white font-medium">
-              <a href="#about" className="hover:text-green-300 transition">About Us</a>
-              <a href="#companies" className="hover:text-green-300 transition">Our Companies</a>
-              <a href="#products" className="hover:text-green-300 transition">Products</a>
-              <a href="#certifications" className="hover:text-green-300 transition">Certifications</a>
-              <a href="#sustainability" className="hover:text-green-300 transition">Sustainability</a>
-              <a href="/contact" className="hover:text-green-300 transition">Contact</a>
-            </div>
-            <div className="lg:hidden text-white">
-              <button className="p-2">
-                <div className="w-6 h-0.5 bg-white mb-1.5"></div>
-                <div className="w-6 h-0.5 bg-white mb-1.5"></div>
-                <div className="w-6 h-0.5 bg-white"></div>
-              </button>
-            </div>
-          </nav>
-          
-          {/* Hero Content */}
-          <div className="flex-1 flex flex-col justify-center items-start max-w-3xl">
-            <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight mb-6">
-              Agroindustry with <span className="text-green-300">Purpose</span>
-            </h1>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl">
-              From our fields to your table. Sustainably grown and processed tropical roots, 
-              delivered as premium ingredients worldwide.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="px-8 py-3 bg-green-500 text-white rounded-md font-medium hover:bg-green-600 transition shadow-lg">
-                Discover Our Products
-              </button>
-              <button className="px-8 py-3 bg-white/20 backdrop-blur-sm text-white border border-white/30 rounded-md font-medium hover:bg-white/30 transition">
-                Learn About Our Process
-              </button>
-            </div>
-          </div>
-          
-          {/* Scroll Indicator */}
-          <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white text-center">
-            <p className="mb-2 text-sm font-light">Scroll to explore</p>
-            <ChevronDown className="mx-auto animate-bounce" size={24} />
-          </div>
-        </div>
-      </header>
+      
+      {/* Hero Section */}
+      <Hero
+        title="Agroindustry with Purpose"
+        highlightText="Purpose"
+        description="From our fields to your table. Sustainably grown and processed tropical roots, delivered as premium ingredients worldwide."
+        backgroundImage={mode === 'placeholder' ? 'https://placehold.co/1920x1080' : '/hero-background.webp'}
+        primaryButtonText="Discover Our Products"
+        primaryButtonLink="#products"
+        secondaryButtonText="Learn About Our Process"
+        secondaryButtonLink="#process"
+        showScrollIndicator={true}
+      />
 
       {/* Key Features Section */}
       <section className="py-20 bg-green-50">
