@@ -240,7 +240,7 @@ export default function HomePage() {
             <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition group">
               <div className="h-56 bg-orange-600 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-orange-900/80 to-transparent"></div>
-                <Image src={getImage('/interbai.webp')} alt="INTERBAI" className="w-full h-full object-cover group-hover:scale-105 transition duration-500" fill unoptimized={true} />
+                <Image src={getImage('/interbai.webp')} alt="INTERBAI" className="w-full h-full object-contain group-hover:scale-105 transition duration-500" fill unoptimized={true} />
                 <div className="absolute bottom-4 left-4 text-white">
                   <h3 className="text-2xl font-bold">INTERBAI</h3>
                 </div>
