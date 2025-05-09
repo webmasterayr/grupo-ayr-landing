@@ -22,7 +22,7 @@ const jsonLdData = {
 
 export default function HomePage() {
   // Change this to 'prod' for actual images
-  const mode: 'placeholder' | 'prod' = 'prod';
+  const mode: string = 'prod';
   // Helper for image src
   const getImage = (src: string) =>
     mode === 'placeholder' ? 'https://placehold.co/600x400' : src;
@@ -178,16 +178,16 @@ export default function HomePage() {
             
             <div className="lg:w-1/2 grid grid-cols-2 gap-4">
               <div className="rounded-lg overflow-hidden h-64">
-                <Image src={getImage('/farming-operations.webp')} alt="Farming operations" className="w-full h-full object-cover" fill unoptimized={true} />
+                <Image src={getImage('/farming-operations.webp')} alt="Farming operations" className="w-full h-full object-cover" height={256} width={256} unoptimized={true} />
               </div>
               <div className="rounded-lg overflow-hidden h-64 mt-8">
-                <Image src={getImage('/processing-facility.jpg')} alt="Processing facility" className="w-full h-full object-cover" fill unoptimized={true} />
+                <Image src={getImage('/processing-facility.webp')} alt="Processing facility" className="w-full h-full object-cover" height={256} width={256} unoptimized={true} />
               </div>
               <div className="rounded-lg overflow-hidden h-64">
-                <Image src={getImage('/products.jpg')} alt="Products" className="w-full h-full object-cover" fill unoptimized={true} />
+                <Image src={getImage('/farm-workers-2.webp')} alt="Products" className="w-full h-full object-cover" height={256} width={256} unoptimized={true} />
               </div>
               <div className="rounded-lg overflow-hidden h-64 mt-8">
-                <Image src={getImage('/farm-workers.jpg')} alt="Farm workers" className="w-full h-full object-cover" fill unoptimized={true} />
+                <Image src={getImage('/farm-workers.webp')} alt="Farm workers" className="w-full h-full object-cover" height={256} width={256} unoptimized={true} />
               </div>
             </div>
           </div>
@@ -209,7 +209,7 @@ export default function HomePage() {
             <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition group">
               <div className="h-56 bg-green-600 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-green-900/80 to-transparent"></div>
-                <Image src={getImage('/semig.jpg')} alt="SEMIG" className="w-full h-full object-cover group-hover:scale-105 transition duration-500" fill unoptimized={true} />
+                <Image src={getImage('/semig.webp')} alt="SEMIG" className="w-full h-full object-cover group-hover:scale-105 transition duration-500" fill unoptimized={true} />
                 <div className="absolute bottom-4 left-4 text-white">
                   <h3 className="text-2xl font-bold">SEMIG</h3>
                 </div>
@@ -240,7 +240,7 @@ export default function HomePage() {
             <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition group">
               <div className="h-56 bg-orange-600 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-orange-900/80 to-transparent"></div>
-                <Image src={getImage('/interbai.jpg')} alt="INTERBAI" className="w-full h-full object-cover group-hover:scale-105 transition duration-500" fill unoptimized={true} />
+                <Image src={getImage('/interbai.webp')} alt="INTERBAI" className="w-full h-full object-cover group-hover:scale-105 transition duration-500" fill unoptimized={true} />
                 <div className="absolute bottom-4 left-4 text-white">
                   <h3 className="text-2xl font-bold">INTERBAI</h3>
                 </div>
@@ -271,7 +271,7 @@ export default function HomePage() {
             <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition group">
               <div className="h-56 bg-blue-600 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 to-transparent"></div>
-                <Image src={getImage('/mely-foods.jpg')} alt="MELY FOODS" className="w-full h-full object-cover group-hover:scale-105 transition duration-500" fill unoptimized={true} />
+                <Image src={getImage('/mely-foods.webp')} alt="MELY FOODS" className="w-full h-full object-cover group-hover:scale-105 transition duration-500" fill unoptimized={true} />
                 <div className="absolute bottom-4 left-4 text-white">
                   <h3 className="text-2xl font-bold">MELY FOODS</h3>
                 </div>
