@@ -272,7 +272,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="p-8 flex-grow flex flex-col">
-              <h3 className="text-2xl font-bold mb-4 text-blue-700">Natural Snacks and Ingredients for Animal Nutrition
+              <h3 className="text-2xl font-bold mb-4 text-blue-700">Natural single ingridient pet treats for pet food and animal nutrition
               </h3>
               <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
               Mely Foods is Grupo AYR's division focused on pet food and animal nutrition. It produces functional ingredients and 100% natural dehydrated snacks made from tropical roots and fruits such as sweet potato, green banana, papaya, and pumpkin.
