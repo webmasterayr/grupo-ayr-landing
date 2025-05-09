@@ -1,4 +1,4 @@
-import { Award, Check, ChevronDown, Facebook, Globe, Instagram, Leaf, Linkedin, Twitter, } from "lucide-react";
+import { Award, Check, ChevronDown, Facebook, Globe, Handshake, Instagram, Leaf, Linkedin, Scale, Twitter, } from "lucide-react";
 import JsonLd from "./components/seo/JsonLd";
 import Image from "next/image";
 import BrandLogo from "@/modules/landing/presentation/components/shared/brand-logo/brand-logo";
@@ -588,7 +588,7 @@ export default function HomePage() {
       
       <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
         <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mb-4">
-          <Image src={getIcon('/community-icon.jpg', 24)} alt="Community icon" className="w-6 h-6" width={24} height={24} unoptimized={true} />
+        <Handshake className="text-green-800" size={24} />
         </div>
         <h3 className="text-xl font-bold mb-3">Social Responsibility</h3>
         <p className="text-green-100">
@@ -599,7 +599,7 @@ export default function HomePage() {
       
       <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
         <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mb-4">
-          <Image src={getIcon('/ethical-trade-icon.jpg', 24)} alt="Ethical trade icon" className="w-6 h-6" width={24} height={24} unoptimized={true} />
+          <Scale className="text-green-800" size={24} />
         </div>
         <h3 className="text-xl font-bold mb-3">Fair & Responsible Trade</h3>
         <p className="text-green-100">
@@ -640,7 +640,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
             <div>
               <div className="w-48 h-12 bg-white/90 rounded-md flex items-center justify-center mb-6">
-                <BrandLogo mode="horizontal" width={160} height={40} />
+                <Image src={getImage('/logo.webp')} alt="Grupo AYR Logo" className="w-full h-full object-contain" width={160} height={40} unoptimized={true} />
               </div>
               <p className="text-gray-400 mb-6">
                 Agroindustry with Purpose: From our Honduran fields to global markets, 
