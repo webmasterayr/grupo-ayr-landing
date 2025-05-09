@@ -1,4 +1,4 @@
-import { Award, Check, ChevronDown, Facebook, Globe, Handshake, Instagram, Leaf, Linkedin, Navigation, Scale, Twitter, } from "lucide-react";
+import { Award, Check, ChevronDown, Facebook, Globe, Handshake, Instagram, Leaf, Link, Linkedin, Navigation, Scale, Twitter, } from "lucide-react";
 import JsonLd from "./components/seo/JsonLd";
 import Image from "next/image";
 import BrandLogo from "@/modules/landing/presentation/components/shared/brand-logo/brand-logo";
@@ -135,9 +135,9 @@ export default function HomePage() {
                 </div>
               </div>
               
-              <button className="px-8 py-3 bg-green-600 text-white rounded-md font-medium hover:bg-green-700 transition">
+              <Link href="/#process" className="px-8 py-3 bg-green-600 text-white rounded-md font-medium hover:bg-green-700 transition">
                 Learn More About Us
-              </button>
+              </Link>
             </div>
             
             <div className="lg:w-1/2 grid grid-cols-2 gap-4">
@@ -376,7 +376,7 @@ export default function HomePage() {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-gray-900 text-white">
+      <section id="process" className="py-20 bg-gray-900 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">Our Farm-to-Table Process</h2>
