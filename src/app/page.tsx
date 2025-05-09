@@ -5,6 +5,7 @@ import BrandLogo from "@/modules/landing/presentation/components/shared/brand-lo
 import DownloadCatalogButton from "@/components/DownloadCatalogButton";
 import { title } from "process";
 import Hero from "./Hero";
+import AnchorLink from "@/components/ui/AnchorLink";
 
 const jsonLdData = {
   "@context": "https://schema.org",
@@ -135,9 +136,9 @@ export default function HomePage() {
                 </div>
               </div>
               
-              <Link href="/#process" className="px-8 py-3 bg-green-600 text-white rounded-md font-medium hover:bg-green-700 transition">
+              <AnchorLink href="/#process" className="px-8 py-3 bg-green-600 text-white rounded-md font-medium hover:bg-green-700 transition">
                 Learn More About Us
-              </Link>
+              </AnchorLink>
             </div>
             
             <div className="lg:w-1/2 grid grid-cols-2 gap-4">

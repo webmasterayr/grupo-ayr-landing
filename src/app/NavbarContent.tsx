@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import Link from "next/link";
+import AnchorLink from "@/components/ui/AnchorLink";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -60,7 +60,7 @@ export default function Navigation({ transparent = false, className }: Navigatio
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
+          <AnchorLink href="/" className="flex items-center">
             <Image 
               src="/logo.webp" 
               alt="Grupo AYR Logo" 
@@ -68,26 +68,31 @@ export default function Navigation({ transparent = false, className }: Navigatio
               height={40} 
               className="h-14 w-auto" 
             />
-          </Link>
+          </AnchorLink>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex space-x-8 items-center">
-            <Link href="/#about" className={linkClasses}>
+            <AnchorLink href="/#about" className={linkClasses}>
+
               About Us
-            </Link>
-            <Link href="/#companies" className={linkClasses}>
+            </AnchorLink>
+            <AnchorLink href="/#companies" className={linkClasses}>
+
               Our Companies
-            </Link>
-            <Link href="/#products" className={linkClasses}>
+            </AnchorLink>
+            <AnchorLink href="/#products" className={linkClasses}>
+
               Products
-            </Link>
-            <Link href="/#certifications" className={linkClasses}>
+            </AnchorLink>
+            <AnchorLink href="/#certifications" className={linkClasses}>
+
               Certifications
-            </Link>
-            <Link href="/#sustainability" className={linkClasses}>
+            </AnchorLink>
+            <AnchorLink href="/#sustainability" className={linkClasses}>
+
               Sustainability
-            </Link>
-            <Link 
+            </AnchorLink>
+            <AnchorLink 
               href="/contact" 
               className={cn(
                 "px-5 py-2 rounded-md font-medium transition-colors",
@@ -97,7 +102,7 @@ export default function Navigation({ transparent = false, className }: Navigatio
               )}
             >
               Contact
-            </Link>
+            </AnchorLink>
           </div>
 
           {/* Mobile Menu Button */}
@@ -118,48 +123,48 @@ export default function Navigation({ transparent = false, className }: Navigatio
       {/* Mobile Menu */}
       <div className={mobileMenuClasses}>
         <div className="flex flex-col space-y-6 text-lg">
-          <Link 
+          <AnchorLink 
             href="/#about" 
             className="py-2 border-b border-gray-100"
             onClick={() => setIsOpen(false)}
           >
             About Us
-          </Link>
-          <Link 
+          </AnchorLink>
+          <AnchorLink 
             href="/#companies" 
             className="py-2 border-b border-gray-100"
             onClick={() => setIsOpen(false)}
           >
             Our Companies
-          </Link>
-          <Link 
+          </AnchorLink>
+          <AnchorLink 
             href="/#products" 
             className="py-2 border-b border-gray-100"
             onClick={() => setIsOpen(false)}
           >
             Products
-          </Link>
-          <Link 
+          </AnchorLink>
+          <AnchorLink 
             href="/#certifications" 
             className="py-2 border-b border-gray-100"
             onClick={() => setIsOpen(false)}
           >
             Certifications
-          </Link>
-          <Link 
+          </AnchorLink>
+          <AnchorLink 
             href="/#sustainability" 
             className="py-2 border-b border-gray-100"
             onClick={() => setIsOpen(false)}
           >
             Sustainability
-          </Link>
-          <Link 
+          </AnchorLink>
+          <AnchorLink 
             href="/contact" 
             className="py-2 px-4 bg-green-600 text-white rounded-md text-center mt-4"
             onClick={() => setIsOpen(false)}
           >
             Contact
-          </Link>
+          </AnchorLink>
         </div>
       </div>
     </nav>
