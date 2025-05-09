@@ -61,8 +61,8 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-lg">Email Us</h3>
                     <p className="text-gray-600">
-                      <a href="mailto:contacto@grupoayr.hn" className="hover:text-green-600 transition">
-                        contacto@grupoayr.hn
+                      <a href="mailto:r.interiano@ayagro.com" className="hover:text-green-600 transition">
+                        r.interiano@ayagro.com
                       </a>
                     </p>
                   </div>
