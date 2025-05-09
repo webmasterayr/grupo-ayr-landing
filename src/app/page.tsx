@@ -22,7 +22,7 @@ const jsonLdData = {
 
 export default function HomePage() {
   // Change this to 'prod' for actual images
-  const mode: 'placeholder' | 'prod' = 'placeholder';
+  const mode: 'placeholder' | 'prod' = 'prod';
   // Helper for image src
   const getImage = (src: string) =>
     mode === 'placeholder' ? 'https://placehold.co/600x400' : src;
@@ -178,7 +178,7 @@ export default function HomePage() {
             
             <div className="lg:w-1/2 grid grid-cols-2 gap-4">
               <div className="rounded-lg overflow-hidden h-64">
-                <Image src={getImage('/farming-operations.jpg')} alt="Farming operations" className="w-full h-full object-cover" fill unoptimized={true} />
+                <Image src={getImage('/farming-operations.webp')} alt="Farming operations" className="w-full h-full object-cover" fill unoptimized={true} />
               </div>
               <div className="rounded-lg overflow-hidden h-64 mt-8">
                 <Image src={getImage('/processing-facility.jpg')} alt="Processing facility" className="w-full h-full object-cover" fill unoptimized={true} />
