@@ -240,7 +240,7 @@ export default function ContactPage() {
               Explore Products
             </AnchorLink>
             <a
-              href="/catalog.pdf"
+              href="/main_catalog.pdf"
               className="px-8 py-3 bg-transparent border-2 border-white text-white rounded-md font-medium hover:bg-white/10 transition"
               target="_blank"
               rel="noopener noreferrer"
