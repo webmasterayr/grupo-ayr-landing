@@ -3,8 +3,8 @@
 import { Toaster } from "sonner";
 import { Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
-import ContactPageSchema from "./ContactPageSchema";
 import { ContactForm } from "./ContactForm";
+import ContactPageSchema from "./ContactPageSchema";
 
 export default function ContactPage() {
   return (
@@ -13,7 +13,7 @@ export default function ContactPage() {
       <ContactPageSchema />
       
       {/* Hero Section */}
-      <section className="relative bg-green-800 text-white py-20 pt-28">
+      <section className="relative bg-green-800 text-white py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-green-900/90 to-green-700/90 z-10"></div>
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50" 
@@ -51,8 +51,8 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-lg">Our Location</h3>
                     <p className="text-gray-600">
-                      Comayagua Valley<br />
-                      Comayagua, Honduras
+                      Colonia San Miguel, frente a Molinos de Honduras,<br />
+                      Comayagua, Comayagua, Honduras
                     </p>
                   </div>
                 </div>
@@ -86,6 +86,37 @@ export default function ContactPage() {
                 </div>
               </div>
               
+              {/* Executive Board */}
+              <div className="mt-10">
+                <h3 className="font-semibold text-lg mb-4">Executive Board</h3>
+                <div className="space-y-4">
+                  <div>
+                    <span className="font-bold">Rodolfo Interiano Baide</span><br />
+                    <span className="text-sm">CHIEF EXECUTIVE OFFICER (CEO)</span><br />
+                    <a href="mailto:r.interiano@ayragro.com" className="text-green-700 hover:underline">r.interiano@ayragro.com</a><br />
+                    <a href="tel:+50493721765" className="text-gray-600 hover:underline">+504-9372-1765</a>
+                  </div>
+                  <div>
+                    <span className="font-bold">Tony Medina</span><br />
+                    <span className="text-sm">CHIEF OPERATING OFFICER (COO)</span><br />
+                    <a href="mailto:t.medina@ayragro.com" className="text-green-700 hover:underline">t.medina@ayragro.com</a><br />
+                    <a href="tel:+50493666952" className="text-gray-600 hover:underline">+504-9366-6952</a>
+                  </div>
+                  <div>
+                    <span className="font-bold">Adalberto Arriaza</span><br />
+                    <span className="text-sm">GENERAL DIRECTOR</span><br />
+                    <a href="mailto:a.arriaza@ayragro.com" className="text-green-700 hover:underline">a.arriaza@ayragro.com</a><br />
+                    <a href="tel:+50493283861" className="text-gray-600 hover:underline">+504-9328-3861</a>
+                  </div>
+                  <div>
+                    <span className="font-bold">Thesla Maldonado</span><br />
+                    <span className="text-sm">Import/Export Manager</span><br />
+                    <a href="mailto:t.maldonado@ayragro.com" className="text-green-700 hover:underline">t.maldonado@ayragro.com</a><br />
+                    <a href="tel:+50497224638" className="text-gray-600 hover:underline">+504-9722-4638</a>
+                  </div>
+                </div>
+              </div>
+
               <div className="mt-10">
                 <h3 className="font-semibold text-lg mb-4">Follow Us</h3>
                 <div className="flex space-x-4">
@@ -103,7 +134,7 @@ export default function ContactPage() {
                     className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-green-600 hover:text-white transition"
                   >
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" />
+                      <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
                     </svg>
                   </a>
                   
@@ -137,6 +168,31 @@ export default function ContactPage() {
         </div>
       </section>
       
+      {/* Map Section */}
+      <section className="bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Visit Our Facilities</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Our headquarters and main production facilities are located in the 
+              Comayagua Valley, Honduras. Come and see our sustainable farming 
+              and processing operations firsthand.
+            </p>
+          </div>
+          
+          <div className="relative h-[400px] rounded-xl overflow-hidden shadow-lg">
+           
+            <iframe className="absolute inset-0 w-full h-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.8735239338594!2d-87.63259219999999!3d14.4344515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f658568d35cb749%3A0x6461a5791877a094!2sMELY%20FOODS%20PROCESSING%20AND%20EXPORT%20S.%20A.!5e0!3m2!1sen!2shn!4v1746772913747!5m2!1sen!2shn" width="600" height="450" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white bg-opacity-90 p-4 rounded-lg shadow-md max-w-xs text-center">
+              <h3 className="font-bold">Grupo AYR</h3>
+              <p className="text-sm">
+                Colonia San Miguel, frente a Molinos de Honduras,<br />
+                Comayagua, Comayagua, Honduras
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
       
       {/* CTA Section */}
       <section className="bg-green-800 text-white py-16">
@@ -148,13 +204,13 @@ export default function ContactPage() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a
-              href="#products"
+              href="/#products"
               className="px-8 py-3 bg-white text-green-800 rounded-md font-medium hover:bg-green-100 transition shadow-md"
             >
               Explore Products
             </a>
             <a
-              href="/main_catalog.pdf"
+              href="/resources/catalog.pdf"
               className="px-8 py-3 bg-transparent border-2 border-white text-white rounded-md font-medium hover:bg-white/10 transition"
               target="_blank"
               rel="noopener noreferrer"
