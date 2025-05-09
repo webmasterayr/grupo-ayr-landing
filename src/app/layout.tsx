@@ -6,6 +6,7 @@ import './globals.css';
 import LandingProviders from '@/modules/landing/presentation/providers/landing-provider/landing-provider';
 import NavbarContent from './NavbarContent';
 import FloatingContactButton from './Floating-Contact';
+import Footer from '@/components/ui/Footer';
 // import { Toaster } from "@/components/ui/sonner";
 // import { GoogleAnalytics } from "@next/third-parties/google";
 
@@ -142,6 +143,7 @@ export default function RootLayout({
             <NavbarContent transparent />
             <FloatingContactButton />
             {children}
+            <Footer />
           </main>
         </LandingProviders>
       </body>
