@@ -551,7 +551,7 @@ export default function HomePage() {
   {
     title: "Kosher",
     desc: "Compliant with Jewish dietary regulations",
-    img: "/products.jpg" // Placeholder, replace with real logo if available
+    img: "/kosher-seal-seeklogo.png" // Placeholder, replace with real logo if available
   }
 ].map((cert, index) => (
   <div key={index} className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition text-center">
