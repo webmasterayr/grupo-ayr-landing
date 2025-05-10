@@ -25,6 +25,17 @@ const jsonLdData = {
 };
 
 export default function HomePage() {
+  // Pet Treats array for the grid
+  const petTreats = [
+    { name: "Sweet Potato Chews", img: "/treats/Sweet-Potato-Chews.png" }, // Image 1
+    { name: "Cassava Biscuits", img: "/treats/Cassava-Biscuits.png" },     // Image 3
+    { name: "Banana Bites", img: "/treats/Banana-Bites.png" },             // Placeholder
+    { name: "Taro Treats", img: "/treats/Taro-Treats.png" },               // Image 2
+    { name: "Mixed Root Crisps", img: "/treats/Mixed-Root-Crisps.png" },   // Image 4
+    { name: "Organic Dental Sticks", img: "/treats/Organic-Dental-Sticks.png" }, // Image 5
+    { name: "Training Treats", img: "/treats/Training-Treats.png" },       // Placeholder
+    { name: "Hypoallergenic Snacks", img: "/treats/Hypoallergenic-Snacks.png" } // Placeholder
+  ];
   // Change this to 'prod' for actual images
   const mode: string = 'prod';
   // Helper for image src
@@ -339,24 +350,16 @@ export default function HomePage() {
     
     <div>
       <h3 className="text-2xl font-bold mb-8 text-center">Pet Treats</h3>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        {[
-          { name: "Sweet Potato Chews", icon: "Bone" },
-          { name: "Cassava Biscuits", icon: "Cookie" },
-          { name: "Banana Bites", icon: "Banana" },
-          { name: "Taro Treats", icon: "CircleDot" },
-          { name: "Mixed Root Crisps", icon: "Salad" },
-          { name: "Organic Dental Sticks", icon: "Toothbrush" },
-          { name: "Training Treats", icon: "Medal" },
-          { name: "Hypoallergenic Snacks", icon: "ShieldCheck" }
-        ].map((treat, index) => (
+       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {petTreats.map((treat, index) => (
           <div key={index} className="bg-blue-50 p-4 rounded-lg text-center hover:bg-blue-100 transition">
-            <div className="w-20 h-20 rounded-full bg-blue-200 mx-auto mb-3 flex items-center justify-center">
-              <Wheat className="h-10 w-10 text-blue-600" />
+            <div className="w-20 h-20 rounded-full bg-blue-200 mx-auto mb-3 flex items-center justify-center overflow-hidden">
+              <Image src={treat.img} alt={treat.name} width={80} height={80} className="object-cover w-full h-full" unoptimized={true} />
             </div>
             <p className="font-medium">{treat.name}</p>
           </div>
         ))}
+
       </div>
     </div>
   </div>
