@@ -366,149 +366,8 @@ export default function HomePage() {
 </section>
 
       {/* Process Section */}
-      <section id="process" className="py-20 bg-gray-900 text-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6">Our Farm-to-Table Process</h2>
-            <p className="max-w-2xl mx-auto text-gray-300">
-              We control every step of the process, ensuring quality, sustainability, and traceability.
-            </p>
-          </div>
-          
-          <div className="relative">
-            {/* Timeline */}
-            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-green-500 transform -translate-x-1/2"></div>
-            
-            <div className="space-y-12 relative">
-              {/* Step 1 */}
-              <div className="flex flex-col md:flex-row items-center">
-                <div className="md:w-1/2 md:pr-12 md:text-right">
-                  <h3 className="text-2xl font-bold mb-3">Planting & Cultivation</h3>
-                  <p className="text-gray-300">
-                    Using organic and sustainable practices, we carefully select and plant 
-                    the highest quality seeds and cuttings in our 600+ hectare farm.
-                  </p>
-                </div>
-                <div className="hidden md:flex items-center justify-center z-10">
-                  <div className="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center">
-                    <span className="font-bold">1</span>
-                  </div>
-                </div>
-                <div className="md:w-1/2 md:pl-12 mt-4 md:mt-0">
-                  <div className="rounded-lg overflow-hidden h-48">
-                    <Image src={getImage('/planting-process.webp')} alt="Planting process" className="w-full h-full object-cover" height={256} width={256} unoptimized={true} />
-                  </div>
-                </div>
-              </div>
-              
-              {/* Step 2 */}
-              <div className="flex flex-col md:flex-row items-center">
-                <div className="md:w-1/2 md:pr-12 md:text-right order-1 md:order-2">
-                  <div className="rounded-lg overflow-hidden h-48">
-                    <Image src={getImage('/growing-process.webp')} alt="Growing process" className="w-full h-full object-cover" height={256} width={256} unoptimized={true} />
-                  </div>
-                </div>
-                <div className="hidden md:flex items-center justify-center z-10 order-2 md:order-3">
-                  <div className="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center">
-                    <span className="font-bold">2</span>
-                  </div>
-                </div>
-                <div className="md:w-1/2 md:pl-12 mt-4 md:mt-0 order-3 md:order-1">
-                  <h3 className="text-2xl font-bold mb-3">Growing & Monitoring</h3>
-                  <p className="text-gray-300">
-                    Our crops are carefully monitored throughout their growth cycle, 
-                    ensuring optimal development without synthetic pesticides or fertilizers.
-                  </p>
-                </div>
-              </div>
-              
-              {/* Step 3 */}
-              <div className="flex flex-col md:flex-row items-center">
-                <div className="md:w-1/2 md:pr-12 md:text-right">
-                  <h3 className="text-2xl font-bold mb-3">Harvesting</h3>
-                  <p className="text-gray-300">
-                    When our crops reach optimal maturity, they are harvested by hand to ensure 
-                    the highest quality and minimize damage to the delicate roots.
-                  </p>
-                </div>
-                <div className="hidden md:flex items-center justify-center z-10">
-                  <div className="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center">
-                    <span className="font-bold">3</span>
-                  </div>
-                </div>
-                <div className="md:w-1/2 md:pl-12 mt-4 md:mt-0">
-                  <div className="rounded-lg overflow-hidden h-48">
-                    <Image src={getImage('/harvesting-process.webp')} alt="Harvesting process" className="w-full h-full object-cover" height={256} width={256} unoptimized={true} />
-                  </div>
-                </div>
-              </div>
-              
-              {/* Step 4 */}
-              <div className="flex flex-col md:flex-row items-center">
-                <div className="md:w-1/2 md:pr-12 md:text-right order-1 md:order-2">
-                  <div className="rounded-lg overflow-hidden h-48">
-                    <Image src={getImage('/processing.webp')} alt="Processing" className="w-full h-full object-cover" height={256} width={256} unoptimized={true} />
-                  </div>
-                </div>
-                <div className="hidden md:flex items-center justify-center z-10 order-2 md:order-3">
-                  <div className="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center">
-                    <span className="font-bold">4</span>
-                  </div>
-                </div>
-                <div className="md:w-1/2 md:pl-12 mt-4 md:mt-0 order-3 md:order-1">
-                  <h3 className="text-2xl font-bold mb-3">Processing & Manufacturing</h3>
-                  <p className="text-gray-300">
-                    In our state-of-the-art facilities, crops are washed, processed, and transformed 
-                    into flours, pet treats, and other products under strict quality controls.
-                  </p>
-                </div>
-              </div>
-              
-              {/* Step 5 */}
-              <div className="flex flex-col md:flex-row items-center">
-                <div className="md:w-1/2 md:pr-12 md:text-right">
-                  <h3 className="text-2xl font-bold mb-3">Quality Control & Packaging</h3>
-                  <p className="text-gray-300">
-                    Every product undergoes rigorous testing before being carefully packaged 
-                    to preserve freshness and ensure it meets our high quality standards.
-                  </p>
-                </div>
-                <div className="hidden md:flex items-center justify-center z-10">
-                  <div className="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center">
-                    <span className="font-bold">5</span>
-                  </div>
-                </div>
-                <div className="md:w-1/2 md:pl-12 mt-4 md:mt-0">
-                  <div className="rounded-lg overflow-hidden h-48">
-                    <Image src={getImage('/quality-control.webp')} alt="Quality control" className="w-full h-full object-cover" height={256} width={256} unoptimized={true} />
-                  </div>
-                </div>
-              </div>
-              
-              {/* Step 6 */}
-              <div className="flex flex-col md:flex-row items-center">
-                <div className="md:w-1/2 md:pr-12 md:text-right order-1 md:order-2">
-                  <div className="rounded-lg overflow-hidden h-48">
-                    <Image src={getImage('/global-distribution.webp')} alt="Global distribution" className="w-full h-full object-cover" height={256} width={256} unoptimized={true} />
-                  </div>
-                </div>
-                <div className="hidden md:flex items-center justify-center z-10 order-2 md:order-3">
-                  <div className="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center">
-                    <span className="font-bold">6</span>
-                  </div>
-                </div>
-                <div className="md:w-1/2 md:pl-12 mt-4 md:mt-0 order-3 md:order-1">
-                  <h3 className="text-2xl font-bold mb-3">Global Distribution</h3>
-                  <p className="text-gray-300">
-                    Our products are shipped worldwide, reaching customers who value quality, 
-                    sustainability, and the unique properties of our tropical root derivatives.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+     
+      <ProcessTimeline />
 
       {/* Certifications Section */}
       <section id="certifications" className="py-20">
@@ -653,5 +512,141 @@ export default function HomePage() {
 
 
       </div>
+  );
+}
+
+
+interface TimelineStep {
+  number: number;
+  title: string;
+  description: string;
+  imageSrc: string;
+  imageAlt: string;
+}
+
+export  function ProcessTimeline() {
+  // Helper for images based on environment
+  const getImage = (src: string) => src;
+
+  const timelineSteps: TimelineStep[] = [
+    {
+      number: 1,
+      title: "Genetic Assurance",
+      description: "At Grupo AYR, we ensure the genetic integrity of our crops through certified laboratory propagation. This guarantees not only vigorous and resilient plants in the field, but also consistently high-quality ingredients in the final product.",
+      imageSrc: "/Genetics posicion 1 .webp",
+      imageAlt: "Laboratory propagation of crops"
+    },
+    {
+      number: 2,
+      title: "Sustainable Soil Preparation",
+      description: "Our commitment begins beneath the surface. Through sustainable soil preparation practices, we nurture healthy ecosystems that support robust, high-quality crops, preserving biodiversity and optimizing natural resources.",
+      imageSrc: "/Soil preparation posicion 2.webp",
+      imageAlt: "Sustainable soil preparation"
+    },
+    {
+      number: 3,
+      title: "Planting & Cultivation",
+      description: "Using organic and sustainable practices, we carefully select and plant the highest quality seeds and cuttings in our 600+ hectare farm.",
+      imageSrc: "/planting-process.webp",
+      imageAlt: "Planting process"
+    },
+    {
+      number: 4,
+      title: "Growing & Monitoring",
+      description: "Our crops are carefully monitored throughout their growth cycle, ensuring optimal development without synthetic pesticides or fertilizers.",
+      imageSrc: "/growing-process.webp",
+      imageAlt: "Growing process"
+    },
+    {
+      number: 5,
+      title: "Harvesting",
+      description: "When our crops reach optimal maturity, they are harvested by hand to ensure the highest quality and minimize damage to the delicate roots.",
+      imageSrc: "/harvesting-process.webp",
+      imageAlt: "Harvesting process"
+    },
+    {
+      number: 6,
+      title: "Processing & Manufacturing",
+      description: "In our state-of-the-art facilities, crops are washed, processed, and transformed into flours, pet treats, and other products under strict quality controls.",
+      imageSrc: "/processing.webp",
+      imageAlt: "Processing"
+    },
+    {
+      number: 7,
+      title: "Quality Control & Packaging",
+      description: "Every product undergoes rigorous testing before being carefully packaged to preserve freshness and ensure it meets our high quality standards.",
+      imageSrc: "/quality-control.webp",
+      imageAlt: "Quality control"
+    },
+    {
+      number: 8,
+      title: "Global Distribution",
+      description: "Our products are shipped worldwide, reaching customers who value quality, sustainability, and the unique properties of our tropical root derivatives.",
+      imageSrc: "/global-distribution.webp",
+      imageAlt: "Global distribution"
+    }
+  ];
+
+  return (
+    <section id="process" className="py-20 bg-gray-900 text-white">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-6">Our Farm-to-Table Process</h2>
+          <p className="max-w-2xl mx-auto text-gray-300">
+            We control every step of the process, ensuring quality, sustainability, and traceability.
+          </p>
+        </div>
+        
+        <div className="relative">
+          {/* Timeline */}
+          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-green-500 transform -translate-x-1/2"></div>
+          
+          <div className="space-y-12 relative">
+            {timelineSteps.map((step, index) => (
+              <div key={step.number} className="flex flex-col md:flex-row items-center">
+                {/* Content on left side for even-numbered steps */}
+                {index % 2 === 0 ? (
+                  <div className="md:w-1/2 md:pr-12 md:text-right">
+                    <h3 className="text-2xl font-bold mb-3">{step.title}</h3>
+                    <p className="text-gray-300">
+                      {step.description}
+                    </p>
+                  </div>
+                ) : (
+                  <div className="md:w-1/2 md:pr-12 md:text-right order-1 md:order-2">
+                    <div className="rounded-lg overflow-hidden h-48">
+                      <Image src={getImage(step.imageSrc)} alt={step.imageAlt} className="w-full h-full object-cover" height={256} width={256} unoptimized={true} />
+                    </div>
+                  </div>
+                )}
+                
+                {/* Timeline circle */}
+                <div className="hidden md:flex items-center justify-center z-10 order-2">
+                  <div className="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center">
+                    <span className="font-bold">{step.number}</span>
+                  </div>
+                </div>
+                
+                {/* Content on right side for even-numbered steps */}
+                {index % 2 === 0 ? (
+                  <div className="md:w-1/2 md:pl-12 mt-4 md:mt-0">
+                    <div className="rounded-lg overflow-hidden h-48">
+                      <Image src={getImage(step.imageSrc)} alt={step.imageAlt} className="w-full h-full object-cover" height={256} width={256} unoptimized={true} />
+                    </div>
+                  </div>
+                ) : (
+                  <div className="md:w-1/2 md:pl-12 mt-4 md:mt-0 order-3 md:order-1">
+                    <h3 className="text-2xl font-bold mb-3">{step.title}</h3>
+                    <p className="text-gray-300">
+                      {step.description}
+                    </p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
