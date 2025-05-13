@@ -24,6 +24,17 @@ const jsonLdData = {
   }
 };
 
+const flourImages: { [key: string]: string } = {
+  "Sweet Potato Flour": "/varieties/harina de camote.png",
+  "Purple Sweet Potato Flour": "/varieties/Purple sweet potato.png",
+  "Cassava Flour": "/varieties/harina de yuca.png",
+  "Taro Flour": "/varieties/Taro flour.png",
+  "Green Banana Flour": "/varieties/harina de banano.png",
+  "Turmeric Flour": "/varieties/Tumeric flour.png",
+  "Yucca Flour": "/varieties/harina de yuca.png", // fallback to cassava/yuca
+  "Plantain Flour": "/varieties/Plantain flour.png",
+};
+
 export default function HomePage() {
   // Pet Treats array for the grid
   const petTreats = [
@@ -327,6 +338,22 @@ export default function HomePage() {
     
     <div className="mb-16">
       <h3 className="text-2xl font-bold mb-8 text-center">Flour Varieties</h3>
+      {(() => {
+        // Must be in this scope for use in grid
+        // Update this object if more flours/images are added
+        // Images must exist in /public/varieties
+        const flourImages: { [key: string]: string } = {
+          "Sweet Potato Flour": "/varieties/harina de camote.png",
+          "Purple Sweet Potato Flour": "/varieties/Purple sweet potato.png",
+          "Cassava Flour": "/varieties/harina de yuca.png",
+          "Taro Flour": "/varieties/Taro flour.png",
+          "Green Banana Flour": "/varieties/harina de banano.png",
+          "Turmeric Flour": "/varieties/Tumeric flour.png",
+          "Yucca Flour": "/varieties/harina de yuca.png", // fallback to cassava/yuca
+          "Plantain Flour": "/varieties/Plantain flour.png",
+        };
+        return null;
+      })()}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {[
           { name: "Sweet Potato Flour", icon: "Potato" },
@@ -339,8 +366,15 @@ export default function HomePage() {
           { name: "Plantain Flour", icon: "Banana" }
         ].map((flour, index) => (
           <div key={index} className="bg-green-50 p-4 rounded-lg text-center hover:bg-green-100 transition">
-            <div className="w-20 h-20 rounded-full bg-green-200 mx-auto mb-3 flex items-center justify-center">
-              <Leaf className="h-10 w-10 text-green-600" />
+            <div className="w-20 h-20 rounded-full bg-green-200 mx-auto mb-3 flex items-center justify-center overflow-hidden">
+              <Image
+                src={flourImages[flour.name]}
+                alt={flour.name}
+                width={80}
+                height={80}
+                className="object-cover w-full h-full"
+                unoptimized={true}
+              />
             </div>
             <p className="font-medium">{flour.name}</p>
           </div>
