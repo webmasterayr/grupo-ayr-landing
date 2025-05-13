@@ -25,14 +25,14 @@ const jsonLdData = {
 };
 
 const flourImages: { [key: string]: string } = {
-  "Sweet Potato Flour": "/varieties/harina de camote.png",
-  "Purple Sweet Potato Flour": "/varieties/Purple sweet potato.png",
-  "Cassava Flour": "/varieties/harina de yuca.png",
-  "Taro Flour": "/varieties/Taro flour.png",
-  "Green Banana Flour": "/varieties/harina de banano.png",
-  "Turmeric Flour": "/varieties/Tumeric flour.png",
-  "Yucca Flour": "/varieties/harina de yuca.png", // fallback to cassava/yuca
-  "Plantain Flour": "/varieties/Plantain flour.png",
+  "Sweet Potato Flour": "/varieties/harina de camote.webp",
+  "Purple Sweet Potato Flour": "/varieties/Purple sweet potato.webp",
+  "Cassava Flour": "/varieties/harina de yuca.webp",
+  "Taro Flour": "/varieties/Taro flour.webp",
+  "Green Banana Flour": "/varieties/harina de banano.webp",
+  "Turmeric Flour": "/varieties/Tumeric flour.webp",
+  "Yucca Flour": "/varieties/harina de yuca.webp", // fallback to cassava/yuca
+  "Plantain Flour": "/varieties/Plantain flour.webp",
 };
 
 export default function HomePage() {
