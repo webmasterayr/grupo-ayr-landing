@@ -41,9 +41,9 @@ export default function HomePage() {
     { name: "Sweet Potato Chews", img: "/treats/Sweet-Potato-Chews.png" }, // Image 1
     { name: "Cassava Biscuits", img: "/treats/Cassava-Biscuits.png" },     // Image 3
     { name: "Banana Bites", img: "/treats/Banana-Bites.png" },             // Placeholder
-    { name: "Taro Treats", img: "/treats/Taro-Treats.png" },               // Image 2
+    { name: "Taro Treats", img: "/treats/Organic-Dental-Sticks.png" },               // Image 2
     { name: "Mixed Root Crisps", img: "/treats/Mixed-Root-Crisps.png" },   // Image 4
-    { name: "Organic Dental Sticks", img: "/treats/Organic-Dental-Sticks.png" }, // Image 5
+    { name: "Organic Dental Sticks", img: "/treats/Taro-Treats.png" }, // Image 5
     { name: "Training Treats", img: "/treats/Training-Treats.png" },       // Placeholder
     { name: "Hypoallergenic Snacks", img: "/treats/Hypoallergenic-Snacks.png" } // Placeholder
   ];
