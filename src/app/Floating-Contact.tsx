@@ -23,7 +23,7 @@ export default function FloatingContactButton() {
         </DialogTrigger>
       </div>
       
-      <DialogContent className="sm:max-w-[625px]">
+      <DialogContent className="sm:max-w-[625px] max-h-[calc(100vh-64px)] w-[95%] overflow-auto">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-2xl font-bold">Contact Us</h2>
           <Button 
