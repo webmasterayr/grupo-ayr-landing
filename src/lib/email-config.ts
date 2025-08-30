@@ -6,7 +6,7 @@
  */
 export const emailConfig = {
   // Email address that will receive contact form submissions
-  contactRecipient: 'r.interiano@aygro.com',
+  contactRecipient: 'r.interiano@ayrgro.com',
 
   // Reply-to address shown to recipients
   replyTo: 'no-reply@grupoayr.hn',
@@ -54,3 +54,4 @@ export const emailSubjects = {
  * In development, set to false to avoid sending real emails
  */
 export const sendRealEmails = process.env.NODE_ENV === 'production';
+
