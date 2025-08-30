@@ -43,15 +43,15 @@ The email settings are configured in `src/lib/email-config.ts`:
 // Modify these settings to change where emails are sent
 export const emailConfig = {
   // Email address that will receive contact form submissions
-  contactRecipient: "contacto@grupoayr.hn",
+  contactRecipient: "r.interiano@ayragro.com",
   
   // Reply-to address shown to recipients
-  replyTo: "no-reply@grupoayr.hn",
+  replyTo: "no-reply@grupoayr.com",
   
   // Company details for the email footer
   companyName: "Grupo AYR",
   companyAddress: "Comayagua Valley, Honduras",
-  companyWebsite: "https://www.grupoayr.hn"
+  companyWebsite: "https://www.grupoayr.com"
 };
 ```
 
@@ -133,4 +133,5 @@ You can test the email system by making a POST request to `/api/contact` with a 
 - Never hardcode email credentials in your codebase
 - Always use environment variables for sensitive information
 - Consider using email services with API-based authentication
+
 - Implement rate limiting on your contact form to prevent abuse
