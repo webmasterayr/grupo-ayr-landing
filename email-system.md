@@ -43,7 +43,7 @@ The email settings are configured in `src/lib/email-config.ts`:
 // Modify these settings to change where emails are sent
 export const emailConfig = {
   // Email address that will receive contact form submissions
-  contactRecipient: "r.interiano@ayragro.com",
+  contactRecipient: "consulting@thebrandbehn.com",
   
   // Reply-to address shown to recipients
   replyTo: "no-reply@grupoayr.com",
@@ -135,3 +135,4 @@ You can test the email system by making a POST request to `/api/contact` with a 
 - Consider using email services with API-based authentication
 
 - Implement rate limiting on your contact form to prevent abuse
+
