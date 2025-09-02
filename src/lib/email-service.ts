@@ -27,48 +27,52 @@ async function createTransporter() {
     secure: smtpConfig.secure,
     auth: {
       user: smtpConfig.auth.user,
-      pass: smtpConfig.auth.pass
-    }
-  };
-
-  console.log({ opt });
-  // If in production, use the configured SMTP settings
-  return nodemailer.createTransport(opt);
-
-  // For development, log instead of sending actual emails
-  console.log('Using console log transport in development mode');
-
-  // Alternatively, use Ethereal for development testing
-  // Comment out the console.log transport and uncomment this for Ethereal
-  /*
-  const testAccount = await nodemailer.createTestAccount();
-  console.log('Created test email account:', testAccount.user);
-  
-  return nodemailer.createTransport({
-    host: 'smtp.ethereal.email',
-    port: 587,
-    secure: false,
-    auth: {
-      user: testAccount.user,
-      pass: testAccount.pass,
+      pass: smtpConfig.auth.pass,
     },
-  });
-  */
-
-  // Console transport for development
-  return {
-    sendMail: async (options: EmailOptions) => {
-      console.log('\n---------- EMAIL WOULD BE SENT ----------');
-      console.log('To:', options.to);
-      console.log('Subject:', options.subject);
-      console.log('ReplyTo:', options.replyTo);
-      console.log('Text Content:', options.text?.substring(0, 150) + '...');
-      console.log('HTML Content:', 'HTML email template (not shown in logs)');
-      console.log('Attachments:', options.attachments ? options.attachments.length : 'None');
-      console.log('----------------------------------------\n');
-      return { messageId: 'dev-mode-' + Date.now() };
-    }
   };
+
+  // Avoid logging secrets
+  console.log('Email transport config', {
+    service: smtpConfig.service,
+    host: smtpConfig.host,
+    port: smtpConfig.port,
+    secure: smtpConfig.secure,
+    hasUser: Boolean(smtpConfig.auth.user),
+  });
+
+  if (sendRealEmails) {
+    return nodemailer.createTransport(opt);
+  }
+
+  // Development/test: try Ethereal; fallback to console transport
+  try {
+    const testAccount = await nodemailer.createTestAccount();
+    console.log('Using Ethereal test account for dev emails');
+    return nodemailer.createTransport({
+      host: 'smtp.ethereal.email',
+      port: 587,
+      secure: false,
+      auth: {
+        user: testAccount.user,
+        pass: testAccount.pass,
+      },
+    });
+  } catch (e) {
+    console.warn('Falling back to console email transport in development');
+    return {
+      sendMail: async (options: EmailOptions) => {
+        console.log('\n---------- EMAIL (DEV) ----------');
+        console.log('To:', options.to);
+        console.log('Subject:', options.subject);
+        console.log('ReplyTo:', options.replyTo);
+        console.log('Text:', (options.text || '').substring(0, 150) + '...');
+        console.log('HTML:', options.html ? '[HTML content omitted]' : '');
+        console.log('Attachments:', options.attachments ? options.attachments.length : 'None');
+        console.log('---------------------------------\n');
+        return { messageId: 'dev-mode-' + Date.now() } as any;
+      },
+    } as any;
+  }
 }
 
 /**
@@ -90,6 +94,13 @@ export async function sendEmail(options: EmailOptions) {
     });
 
     console.log('Email sent:', info.messageId);
+    // In development with Ethereal, output a preview URL for convenience
+    if (!sendRealEmails) {
+      const previewUrl = nodemailer.getTestMessageUrl(info as any);
+      if (previewUrl) {
+        console.log('Ethereal preview URL:', previewUrl);
+      }
+    }
     return { success: true, messageId: info.messageId };
   } catch (error) {
     console.error('Error sending email:', error);

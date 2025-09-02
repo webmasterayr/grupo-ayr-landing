@@ -83,7 +83,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="mt-10">
+              {/* <div className="mt-10">
                 <h3 className="font-semibold text-lg mb-4">Follow Us</h3>
                 <div className="flex space-x-4">
                   <a href="#" className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-green-600 hover:text-white transition">
@@ -110,7 +110,7 @@ export default function ContactPage() {
                     </svg>
                   </a>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Right Column - Form */}
@@ -123,7 +123,7 @@ export default function ContactPage() {
       </section>
 
       {/* Executive Board */}
-      <div className="mt-1 px-5 lg:px-32">
+      <div className="mt-1 pb-16 md:pb-24 px-5 lg:px-32">
         <h3 className="font-semibold text-xl mb-4">Executive Board</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="bg-gray-50 rounded-lg p-4 hover:shadow-md transition">

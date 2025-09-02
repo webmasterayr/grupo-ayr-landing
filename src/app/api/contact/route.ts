@@ -1,4 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
+export const runtime = 'nodejs';
+
 import { z } from 'zod';
 import { sendContactFormEmail } from '@/lib/email-service';
 
@@ -25,11 +27,19 @@ export async function POST(request: NextRequest) {
     const result = contactFormSchema.safeParse(body);
     
     if (!result.success) {
-      // Return validation errors
+      // Return validation errors with a friendly message
+      const formatted = result.error.format();
+      const rootError = (formatted as any)?._errors?.[0];
+      const fieldError = Object.values(formatted as any)
+        .filter((v: any) => v && Array.isArray(v._errors) && v._errors.length)
+        .map((v: any) => v._errors[0])[0];
+      const message = rootError || fieldError || 'Validation failed';
+
       return NextResponse.json(
         { 
-          success: false, 
-          errors: result.error.format() 
+          success: false,
+          message,
+          errors: formatted 
         },
         { status: 400 }
       );
