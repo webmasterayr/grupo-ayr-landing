@@ -6,7 +6,7 @@
  */
 export const emailConfig = {
   // Email address that will receive contact form submissions
-  contactRecipient: 'jhonra121@gmail.com',
+  contactRecipient: 'consulting@thebrandbehn.com',
 
   // Reply-to address shown to recipients
   replyTo: 'no-reply@grupoayr.hn',
