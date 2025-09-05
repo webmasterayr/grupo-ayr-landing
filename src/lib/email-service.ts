@@ -85,7 +85,7 @@ export async function sendEmail(options: EmailOptions) {
     const info = await transporter.sendMail({
       from: `"${emailConfig.companyName}" <${emailConfig.replyTo}>`,
       to: options.to,
-      cc: ['t.medina@aygro.com', 'a.medina@aygro.com', 't.maldonado@aygro.com'],
+      cc: ['t.medina@ayragro.com', 'a.medina@ayragro.com', 't.maldonado@ayragro.com'],
       subject: options.subject,
       text: options.text,
       html: options.html,
