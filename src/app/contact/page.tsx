@@ -47,9 +47,9 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-lg">Our Location</h3>
                     <p className="text-gray-600">
-                      Colonia San Miguel, frente a Molinos de Honduras,
+                      Blvd. Del Norte, Frente a Molinos de Honduras
                       <br />
-                      Comayagua, Comayagua, Honduras
+                      Comayagua, Honduras
                     </p>
                   </div>
                 </div>
@@ -77,6 +77,10 @@ export default function ContactPage() {
                     <p className="text-gray-600">
                       <a href="tel:+50493721765" className="hover:text-green-600 transition">
                         +504 9372-1765
+                      </a>
+                      ,{' '}
+                      <a href="tel:+13462905394" className="hover:text-green-600 transition">
+                        +1 (346) 290-5394
                       </a>
                     </p>
                   </div>
