@@ -78,7 +78,7 @@ export default function ContactPage() {
                       <a href="tel:+50493721765" className="hover:text-green-600 transition">
                         +504 9372-1765
                       </a>
-                      ,{' '}
+                      <br />
                       <a href="tel:+13462905394" className="hover:text-green-600 transition">
                         +1 (346) 290-5394
                       </a>
