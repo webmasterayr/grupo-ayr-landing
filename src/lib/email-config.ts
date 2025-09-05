@@ -6,7 +6,7 @@
  */
 export const emailConfig = {
   // Email address that will receive contact form submissions
-  contactRecipient: 'r.interiano@ayragro.com, t.medina@aygro.com',
+  contactRecipient: 'r.interiano@ayragro.com, t.medina@ayragro.com',
 
   // Reply-to address shown to recipients
   replyTo: 'no-reply@grupoayr.hn',
