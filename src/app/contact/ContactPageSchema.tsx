@@ -11,7 +11,7 @@ export default function ContactPageSchema() {
       '@type': 'Organization',
       'name': 'Grupo AYR',
       'url': 'https://www.grupoayr.hn',
-      'logo': 'https://www.grupoayr.hn/logo.webp',
+      'logo': 'https://www.grupoayr.hn/logo%20grupo%20ayr.svg',
       'contactPoint': {
         '@type': 'ContactPoint',
         'telephone': '+504XXXXXXXX',

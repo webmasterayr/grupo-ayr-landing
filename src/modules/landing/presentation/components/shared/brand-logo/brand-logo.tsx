@@ -9,6 +9,8 @@ interface BrandLogoProps {
   width?: number;
   height?: number;
   mode: 'horizontal' | 'vertical';
+  /** Use 'light' for dark backgrounds (white logo), 'dark' for light backgrounds (colored logo) */
+  variant?: 'dark' | 'light';
   logoClassName?: string;
   dotClassName?: string;
   letterClassName?: string;
@@ -46,9 +48,13 @@ export default function BrandLogo(props: BrandLogoProps) {
 }
 
 function BrandLogoVertical(props: BrandLogoProps) {
+  const logoSrc = props.variant === 'light'
+    ? '/logo grupo ayr blanco.svg'
+    : '/logo grupo ayr.svg';
+
   return (
     <Image
-      src="/logo.webp"
+      src={logoSrc}
       alt="Grupo AYR Logo Vertical"
       width={props.width || 120}
       height={props.height || 40}
@@ -59,9 +65,13 @@ function BrandLogoVertical(props: BrandLogoProps) {
 }
 
 function BrandLogoHorizontal(props: BrandLogoProps) {
+  const logoSrc = props.variant === 'light'
+    ? '/logo grupo ayr blanco.svg'
+    : '/logo grupo ayr.svg';
+
   return (
     <Image
-      src="/logo.webp"
+      src={logoSrc}
       alt="Grupo AYR Logo Horizontal"
       width={props.width || 120}
       height={props.height || 40}

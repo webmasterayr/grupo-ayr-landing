@@ -58,7 +58,7 @@ export default function Navigation({ transparent = false, className }: Navigatio
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <AnchorLink href="/" className="flex items-center">
-            <Image src="/logo.webp" alt="Grupo AYR Logo" width={160} height={40} className="h-14 w-auto" />
+            <Image src="/logo grupo ayr.svg" alt="Grupo AYR Logo" width={160} height={40} className="h-14 w-auto" />
           </AnchorLink>
 
           {/* Desktop Navigation */}

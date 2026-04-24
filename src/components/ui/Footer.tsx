@@ -8,8 +8,8 @@ export default function Footer() {
     <div className="container mx-auto px-4">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
         <div>
-          <div className="w-48 h-12 bg-white/90 rounded-md flex items-center justify-center mb-6">
-            <Image src={'/logo.webp'} alt="Grupo AYR Logo" className="w-full h-full object-contain" width={160} height={40} unoptimized={true} />
+          <div className="w-48 h-12 flex items-center mb-6">
+            <Image src="/logo grupo ayr blanco.svg" alt="Grupo AYR Logo" className="w-full h-full object-contain" width={160} height={40} />
           </div>
           <p className="text-gray-400 mb-6">
             Agroindustry with Purpose: From our Honduran fields to global markets, 

@@ -19,7 +19,7 @@ const jsonLdData = {
     "url": "https://www.example.com/",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://www.example.com/android-chrome-512x512.png"
+      "url": "https://www.grupoayr.hn/logo%20grupo%20ayr.svg"
     }
   }
 };

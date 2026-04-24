@@ -6,7 +6,7 @@ import { ThemeProvider } from '@landing/presentation/providers/theme-provider/th
 export default function LandingProviders({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <>
-      <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={true} disableTransitionOnChange={false}>
+      <ThemeProvider attribute="class" defaultTheme="light" enableSystem={true} disableTransitionOnChange={false}>
       <Toaster position="top-center" richColors closeButton />
         {children}
       </ThemeProvider>
