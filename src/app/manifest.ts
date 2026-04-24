@@ -4,16 +4,16 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'Grupo AYR',
     short_name: 'Grupo AYR',
-    description: 'This is a short description for Example Company. Replace with your own.',
+    description: 'Agroindustry with Purpose: From Honduran fields to global markets.',
     start_url: '/',
     display: 'standalone',
     background_color: '#FFFFFF',
-    theme_color: '#0000FF',
+    theme_color: '#2d6a4f',
     icons: [
       {
-        src: '/favicon.ico',
-        sizes: 'any',
-        type: 'image/x-icon'
+        src: '/favicon-32x32.png',
+        sizes: '32x32',
+        type: 'image/png'
       },
       {
         src: '/android-chrome-192x192.png',

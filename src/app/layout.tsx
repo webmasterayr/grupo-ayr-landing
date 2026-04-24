@@ -116,12 +116,6 @@ export const metadata: Metadata = {
         sizes: '180x180',
         type: 'image/png'
       }
-    ],
-    other: [
-      {
-        rel: 'manifest',
-        url: '/site.webmanifest'
-      }
     ]
   },
   verification: {
